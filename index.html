@@ -3,336 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Stack Directory | Verified AI Voice Agencies</title>
+    <title>B2B AI Voice Agency Directory | Top Conversational AI Partners</title>
+    <meta name="description" content="Discover and hire top-rated B2B AI voice agencies, Vapi developers, and conversational AI experts. Compare verified providers and scale your automated voice stack.">
+    <meta name="keywords" content="AI voice agency, B2B AI voice directory, hire Vapi developer, conversational AI partners, automated voice support">
     <style>
         :root {
-            --bg-color: #090a0f;
-            --card-bg: #121520;
-            --border-color: #1f2436;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --accent: #3b82f6;
-            --accent-hover: #2563eb;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
         }
-
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
         }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 0 1rem;
-        }
-
         header {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .btn-header {
-            background-color: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-        }
-
-        .btn-header:hover {
-            border-color: var(--accent);
-            background-color: rgba(59, 130, 246, 0.05);
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 0;
-        }
-
-        .hero {
             text-align: center;
+            padding: 3rem 1rem 2rem 1rem;
+            border-bottom: 1px solid var(--border);
             max-width: 800px;
-            margin: 0 auto 4rem auto;
+            margin: 0 auto;
         }
-
-        .badge {
-            display: inline-block;
-            background-color: rgba(59, 130, 246, 0.1);
-            color: var(--accent);
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 0.35rem 0.75rem;
-            border-radius: 9999px;
-            margin-bottom: 1.5rem;
+        h1 {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
         }
-
-        .hero h1 {
-            font-size: 2.75rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+        h2 {
+            font-size: 1.1rem;
+            font-weight: normal;
+            color: var(--text-secondary);
+            margin: 0;
         }
-
-        .hero p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .regions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .region-tag {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 0.35rem 0.85rem;
-            border-radius: 4px;
-            font-size: 0.8125rem;
-            color: var(--text-muted);
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-            border-left: 3px solid var(--accent);
-            padding-left: 0.75rem;
-        }
-
-        .category-container {
-            margin-bottom: 4rem;
-        }
-
-        .grid {
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
-
         .card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.75rem;
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.2s, border-color 0.2s;
         }
-
-        .card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-2px);
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
         }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
-
-        .card-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .card-geo {
-            font-size: 0.75rem;
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            color: var(--text-muted);
-        }
-
-        .card-desc {
-            font-size: 0.9375rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-card {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            text-align: center;
-            padding: 0.625rem;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background-color 0.2s;
-        }
-
-        .btn-card:hover {
-            background-color: var(--accent-hover);
-        }
-
         footer {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border-color);
             text-align: center;
-            font-size: 0.8125rem;
-            color: var(--text-muted);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .grid { grid-template-columns: 1fr; }
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">VoiceStack<span>Directory</span></a>
-        <a href="mailto:partners@voicestackdirectory.com" class="btn-header">List Your Agency</a>
+        <h1>The Definitive B2B AI Voice Agency Directory</h1>
+        <h2>Connect with verified conversational AI partners, Vapi specialists, and automated voice infrastructure experts to scale your business.</h2>
     </header>
 
     <main>
-        <section class="hero">
-            <span class="badge">Verified B2B Index</span>
-            <h1>The Global Directory of Elite AI Voice Agencies</h1>
-            <p>Connecting high-ticket Real Estate firms and Home Service contractors with certified conversational AI integration partners.</p>
-            
-            <div class="regions">
-                <span class="region-tag">🇺🇸 United States</span>
-                <span class="region-tag">🇬🇧 United Kingdom</span>
-                <span class="region-tag">🇨🇦 Canada</span>
-                <span class="region-tag">🇦🇺 Australia</span>
-                <span class="region-tag">🇳🇿 New Zealand</span>
-                <span class="region-tag">🇮🇪 Ireland</span>
-                <span class="region-tag">🇸🇬 Singapore</span>
-            </div>
-        </section>
-
-        <!-- Real Estate Category -->
-        <div class="category-container">
-            <h2 class="section-title">Real Estate Voice AI Partners</h2>
-            <div class="grid">
-                <!-- Agency Card 1 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <span class="card-title">PropVoice Solutions</span>
-                            <span class="card-geo">US & CA</span>
-                        </div>
-                        <p class="card-desc">Specialized in automated inbound lead qualification, MLS database lookups, and instant property tour scheduling for high-volume brokerages.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card">Visit Partner Agency</a>
-                </div>
-
-                <!-- Agency Card 2 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <span class="card-title">AuraEstate Conversational</span>
-                            <span class="card-geo">UK & IE</span>
-                        </div>
-                        <p class="card-desc">Custom voice agents designed for real estate agencies to handle out-of-hours buyer inquiries and automatic CRM syncing.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card">Visit Partner Agency</a>
-                </div>
-
-                <!-- Agency Card 3 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <span class="card-title">ANZ PropTech Voice</span>
-                            <span class="card-geo">AU & NZ</span>
-                        </div>
-                        <p class="card-desc">End-to-end voice AI deployment for residential and commercial property management and tenant support workflows.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card">Visit Partner Agency</a>
-                </div>
+        <div class="card">
+            <div>
+                <h3>Top Agency Spot 1</h3>
+                <p>Specialized in high-volume outbound Vapi voice agents and automated CRM routing for enterprise sales.</p>
             </div>
         </div>
-
-        <!-- Home Services Category -->
-        <div class="category-container">
-            <h2 class="section-title">Home Services & Contractors Voice AI Partners</h2>
-            <div class="grid">
-                <!-- Agency Card 1 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <span class="card-title">EmergencyLine AI</span>
-                            <span class="card-geo">US, CA & SG</span>
-                        </div>
-                        <p class="card-desc">24/7 emergency dispatch voice agents for HVAC, plumbing, and electrical contractors. Zero missed service calls guaranteed.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card">Visit Partner Agency</a>
-                </div>
-
-                <!-- Agency Card 2 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <span class="card-title">ContractorVoice UK</span>
-                            <span class="card-geo">UK & IE</span>
-                        </div>
-                        <p class="card-desc">Automated booking assistants integrated directly into local trade field-service software for seamless job dispatching.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card">Visit Partner Agency</a>
-                </div>
-
-                <!-- Agency Card 3 -->
-                <div class="card">
-                    <div>
-                        <div class="card-header">
-                            <span class="card-title">TradeStack Voice Systems</span>
-                            <span class="card-geo">AU, NZ & SG</span>
-                        </div>
-                        <p class="card-desc">Voice infrastructure builders focused on quote generation and automated follow-ups for home renovation and maintenance contractors.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card">Visit Partner Agency</a>
-                </div>
+        <div class="card">
+            <div>
+                <h3>Top Agency Spot 2</h3>
+                <p>Custom conversational AI workflows, ElevenLabs voice cloning integrations, and 24/7 multilingual support lines.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h3>Top Agency Spot 3</h3>
+                <p>Turnkey phone automation solutions for medical clinics, local services, and high-ticket appointment scheduling.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Voice Stack Directory. An independent B2B index for conversational AI integration partners. All rights reserved.</p>
+        <p>&copy; 2026 Voice Stack Directory. An independent B2B index for conversational AI.</p>
     </footer>
 
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
-<script src="/_vercel/insights/script.js" defer></script>
