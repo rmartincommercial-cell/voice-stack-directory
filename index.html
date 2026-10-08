@@ -3,102 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global B2B AI Voice Agency Directory | Top Conversational Partners</title>
-    <meta name="description" content="Discover and hire top-rated global AI voice agencies, Vapi developers, and conversational AI experts for enterprise voice automation.">
-    <meta name="keywords" content="AI voice agency, Vapi developers, conversational AI, B2B voice automation, voice agents">
-    <meta name="robots" content="index, follow">
+    <title>Global B2B AI Voice Agency & Freelancer Directory</title>
+    <meta name="description" content="Discover top-tier conversational AI agencies and independent voice automation developers. Free directory for high-intent enterprise traffic.">
     <link rel="canonical" href="https://voice-stack-directory.vercel.app">
-
-    <!-- Open Graph / Social Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://voice-stack-directory.vercel.app">
-    <meta property="og:title" content="Global B2B AI Voice Agency Directory">
-    <meta property="og:description" content="Connect enterprises with elite conversational AI partners and Vapi developers.">
+    <meta name="robots" content="index, follow">
     
-    <style>
-    :root {
-        --bg-color: #0f172a;
-        --card-bg: #1e293b;
-        --text-primary: #f8fafc;
-        --text-secondary: #94a3b8;
-        --accent: #38bdf8;
-        --border: #334155;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
-    body { background-color: var(--bg-color); color: var(--text-primary); line-height: 1.5; }
-    .top-bar { display: flex; justify-content: flex-end; padding: 1rem 2rem; max-width: 1200px; margin: 0 auto; }
-    .lang-selector { background-color: var(--card-bg); color: var(--text-primary); border: 1px solid var(--border); padding: 0.25rem 0.5rem; border-radius: 8px; font-size: 0.85rem; }
-    header { text-align: center; padding: 2rem 1rem; max-width: 800px; margin: 0 auto; }
-    header h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
-    header p { color: var(--text-secondary); font-size: 1.1rem; }
-    main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-    .category-container { margin-bottom: 3rem; }
-    .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    .card { background-color: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 1rem; }
-    .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-    .card-title { font-size: 1.25rem; font-weight: 600; }
-    .region-tag { font-size: 0.75rem; background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 0.25rem 0.5rem; border-radius: 6px; }
-    .card-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
-    .btn-card { display: inline-block; background-color: var(--accent); color: #0f172a; text-decoration: none; text-align: center; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; }
-    footer { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.85rem; border-top: 1px solid var(--border); }
-    </style>
+    <!-- Tailwind CSS for rapid, clean styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="top-bar">
-        <select id="languageSelect" class="lang-selector" onchange="changeLanguage(this.value)">
-            <option value="en">English 🇬🇧</option>
-            <option value="es">Español 🇪🇸</option>
-            <option value="fr">Français 🇫🇷</option>
-            <option value="de">Deutsch 🇩🇪</option>
-        </select>
-    </div>
-    <header>
-        <h1 data-i18n="title">Global B2B AI Voice Agency Directory</h1>
-        <p data-i18n="subtitle">The definitive global index connecting enterprises with elite conversational AI partners, Vapi developers, and conversational automation experts.</p>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Hero Section -->
+    <header class="bg-white border-b border-slate-200 py-12 px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+                100% Free Curated Directory
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                Global B2B AI Voice Directory
+            </h1>
+            <p class="text-lg text-slate-600 mb-8">
+                Connecting enterprises with top conversational AI partners, specialized agencies, and independent voice automation developers.
+            </p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-md mx-auto">
+                <input type="text" id="searchInput" placeholder="Search by name, technology, or keyword..." 
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm text-sm">
+            </div>
+        </div>
     </header>
-    <main>
-        <div class="category-container">
-            <h2 class="section-title" data-i18n="cat1">Inbound Sales & Lead Qualification</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">Arose AI</span><span class="region-tag">🌐 Global</span></div>
-                        <p class="card-desc" data-i18n="desc1">Specializing in automated voice workflows and high-concurrency qualification for B2B enterprises.</p>
-                    </div>
-                    <a href="https://retellai.com" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">Target Dial</span><span class="region-tag">🌐 North America</span></div>
-                        <p class="card-desc" data-i18n="desc2">Elite voice AI developers focusing on instant speed-to-lead response models.</p>
-                    </div>
-                    <a href="https://vapi.ai" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">OmniVoice Global</span><span class="region-tag">🌐 Europe</span></div>
-                        <p class="card-desc" data-i18n="desc3">Multilingual conversational infrastructure built for enterprise sales funnels.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-            </div>
+
+    <!-- Navigation Tabs (Agencies vs Freelancers) -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-8">
+            <button onclick="switchTab('agencies')" id="btn-agencies" class="tab-btn py-4 px-2 font-semibold text-sm border-b-2 border-indigo-600 text-indigo-600 focus:outline-none transition-colors">
+                🏢 Agencies
+            </button>
+            <button onclick="switchTab('freelancers')" id="btn-freelancers" class="tab-btn py-4 px-2 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-700 focus:outline-none transition-colors">
+                💻 Freelancers
+            </button>
         </div>
-        <div class="category-container">
-            <h2 class="section-title" data-i18n="cat2">Customer Support & Helpdesk Voice Agents</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">Helpline AI</span><span class="region-tag">🌐 UK</span></div>
-                        <p class="card-desc" data-i18n="desc4">24/7 Tier-1 customer support automation integrating natively with CRM databases.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- AGENCIES SECTION -->
+        <section id="section-agencies" class="directory-section">
+            <div class="mb-6 flex justify-between items-center">
+                <h2 class="text-xl font-bold text-slate-900">Verified AI Voice Agencies</h2>
+                <span id="count-agencies" class="text-xs font-medium text-slate-500 bg-slate-200 px-2.5 py-1 rounded-full">0 listed</span>
             </div>
-        </div>
+            <!-- Grid container for agencies -->
+            <div id="grid-agencies" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+        </section>
+
+        <!-- FREELANCERS SECTION -->
+        <section id="section-freelancers" class="directory-section hidden">
+            <div class="mb-6 flex justify-between items-center">
+                <h2 class="text-xl font-bold text-slate-900">Independent Voice Developers</h2>
+                <span id="count-freelancers" class="text-xs font-medium text-slate-500 bg-slate-200 px-2.5 py-1 rounded-full">0 listed</span>
+            </div>
+            <!-- Grid container for freelancers -->
+            <div id="grid-freelancers" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+        </section>
+
     </main>
-    <footer>
-        <p>&copy; 2026 Global B2B AI Voice Agency Directory. All rights reserved.</p>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 px-4 text-center text-sm text-slate-500">
+        <p class="mb-2">Core directory listings are 100% free. Sustained through optional sponsored placement slots.</p>
+        <p>&copy; 2026 Global B2B AI Voice Directory. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript Data and Interactivity -->
+    <script>
+        // Data source for agencies and freelancers
+        const directoryData = {
+            agencies: [
+                {
+                    name: "VoiceFlow Solutions",
+                    description: "Specialized in enterprise-grade outbound and inbound conversational voice agents using Vapi and custom LLMs.",
+                    tech: "Vapi, Retell, Python",
+                    website: "#",
+                    badge: "Featured"
+                },
+                {
+                    name: "Synthetix AI",
+                    description: "End-to-end voice infrastructure design for customer support automation and CRM synchronization.",
+                    tech: "Bland AI, OpenAI Realtime",
+                    website: "#",
+                    badge: "Verified"
+                }
+            ],
+            freelancers: [
+                {
+                    name: "Alex Rivera",
+                    description: "Independent full-stack voice developer building high-conversion telephony pipelines for SMBs.",
+                    tech: "Vapi, Node.js, Webhooks",
+                    website: "#",
+                    badge: "Top Rated"
+                },
+                {
+                    name: "Elena Vostrikova",
+                    description: "Custom multilingual voice agent integration expert with focus on low latency and natural turn-taking.",
+                    tech: "LiveKit, Python, Deepgram",
+                    website: "#",
+                    badge: "Verified"
+                }
+            ]
+        };
+
+        // Render Cards function
+        function renderDirectory() {
+            const agencyGrid = document.getElementById('grid-agencies');
+            const freelancerGrid = document.getElementById('grid-freelancers');
+            
+            document.getElementById('count-agencies').innerText = `${directoryData.agencies.length} listed`;
+            document.getElementById('count-freelancers').innerText = `${directoryData.freelancers.length} listed`;
+
+            // Render Agencies
+            agencyGrid.innerHTML = directoryData.agencies.map(item => `
+                <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-slate-900 text-lg">${item.name}</h3>
+                            <span class="text-xs bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-md font-medium">${item.badge}</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-4">${item.description}</p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            ${item.tech.split(',').map(t => `<span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">${t.trim()}</span>`).join('')}
+                        </div>
+                        <a href="${item.website}" target="_blank" class="block w-full text-center bg-slate-900 hover:bg-indigo-600 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                            Visit Profile &rarr;
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render Freelancers
+            freelancerGrid.innerHTML = directoryData.freelancers.map(item => `
+                <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-slate-900 text-lg">${item.name}</h3>
+                            <span class="text-xs bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded-md font-medium">${item.badge}</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-4">${item.description}</p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            ${item.tech.split(',').map(t => `<span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">${t.trim()}</span>`).join('')}
+                        </div>
+                        <a href="${item.website}" target="_blank" class="block w-full text-center bg-slate-900 hover:bg-emerald-600 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                            Hire / Contact &rarr;
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Tab Switching Logic
+        function switchTab(tab) {
+            const agenciesSection = document.getElementById('section-agencies');
+            const freelancersSection = document.getElementById('section-freelancers');
+            const btnAgencies = document.getElementById('btn-agencies');
+            const btnFreelancers = document.getElementById('btn-freelancers');
+
+            if (tab === 'agencies') {
+                agenciesSection.classList.remove('hidden');
+                freelancersSection.classList.add('hidden');
+                btnAgencies.className = "tab-btn py-4 px-2 font-semibold text-sm border-b-2 border-indigo-600 text-indigo-600 focus:outline-none transition-colors";
+                btnFreelancers.className = "tab-btn py-4 px-2 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-700 focus:outline-none transition-colors";
+            } else {
+                freelancersSection.classList.remove('hidden');
+                agenciesSection.classList.add('hidden');
+                btnFreelancers.className = "tab-btn py-4 px-2 font-semibold text-sm border-b-2 border-emerald-600 text-emerald-600 focus:outline-none transition-colors";
+                btnAgencies.className = "tab-btn py-4 px-2 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-700 focus:outline-none transition-colors";
+            }
+        }
+
+        // Initialize on load
+        window.onload = renderDirectory;
+    </script>
 </body>
 </html>
