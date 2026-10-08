@@ -4,34 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global B2B AI Voice Agency Directory | Top Conversational Partners</title>
-    <meta name="description" content="Discover and hire top-rated global AI voice agencies, Vapi developers, and conversational automation partners for B2B scale.">
+    <meta name="description" content="Discover and hire top-rated global AI voice agencies, Vapi developers, and conversational AI experts for enterprise voice automation.">
+    <meta name="keywords" content="AI voice agency, Vapi developers, conversational AI, B2B voice automation, voice agents">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://voice-stack-directory.vercel.app">
+
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://voice-stack-directory.vercel.app">
+    <meta property="og:title" content="Global B2B AI Voice Agency Directory">
+    <meta property="og:description" content="Connect enterprises with elite conversational AI partners and Vapi developers.">
+    
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent: #38bdf8;
-            --border: #334155;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-primary); line-height: 1.5; }
-        .top-bar { display: flex; justify-content: flex-end; padding: 1rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .lang-selector { background-color: var(--card-bg); color: var(--text-primary); border: 1px solid var(--border); padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.9rem; outline: none; }
-        header { text-align: center; padding: 2rem 1rem; max-width: 800px; margin: 0 auto; }
-        header h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
-        header p { color: var(--text-secondary); font-size: 1.1rem; }
-        main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-        .category-container { margin-bottom: 3rem; }
-        .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); color: var(--accent); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .card { background-color: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-        .card-title { font-size: 1.25rem; font-weight: 600; }
-        .region-tag { font-size: 0.75rem; background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 0.25rem 0.6rem; border-radius: 20px; }
-        .card-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .btn-card { display: inline-block; text-align: center; color: var(--accent); border: 1px solid var(--accent); padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; }
-        footer { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 4rem; }
+    :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --accent: #38bdf8;
+        --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-primary); line-height: 1.5; }
+    .top-bar { display: flex; justify-content: flex-end; padding: 1rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .lang-selector { background-color: var(--card-bg); color: var(--text-primary); border: 1px solid var(--border); padding: 0.25rem 0.5rem; border-radius: 8px; font-size: 0.85rem; }
+    header { text-align: center; padding: 2rem 1rem; max-width: 800px; margin: 0 auto; }
+    header h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
+    header p { color: var(--text-secondary); font-size: 1.1rem; }
+    main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+    .category-container { margin-bottom: 3rem; }
+    .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .card { background-color: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 1rem; }
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+    .card-title { font-size: 1.25rem; font-weight: 600; }
+    .region-tag { font-size: 0.75rem; background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 0.25rem 0.5rem; border-radius: 6px; }
+    .card-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn-card { display: inline-block; background-color: var(--accent); color: #0f172a; text-decoration: none; text-align: center; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; }
+    footer { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.85rem; border-top: 1px solid var(--border); }
     </style>
 </head>
 <body>
@@ -45,7 +55,7 @@
     </div>
     <header>
         <h1 data-i18n="title">Global B2B AI Voice Agency Directory</h1>
-        <p data-i18n="subtitle">The definitive global index connecting enterprises with elite conversational AI partners, Vapi developers, and voice automation experts.</p>
+        <p data-i18n="subtitle">The definitive global index connecting enterprises with elite conversational AI partners, Vapi developers, and conversational automation experts.</p>
     </header>
     <main>
         <div class="category-container">
@@ -53,245 +63,42 @@
             <div class="grid">
                 <div class="card">
                     <div>
-                        <div class="card-header"><span class="card-title">Arose AI</span><span class="region-tag">🇺🇸 Global / US</span></div>
-                        <p class="card-desc" data-i18n="desc1">Specializing in automated voice workflows and high-concurrency Retell deployments handling over 600,000+ sales calls.</p>
+                        <div class="card-header"><span class="card-title">Arose AI</span><span class="region-tag">🌐 Global</span></div>
+                        <p class="card-desc" data-i18n="desc1">Specializing in automated voice workflows and high-concurrency qualification for B2B enterprises.</p>
                     </div>
                     <a href="https://retellai.com" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
                 </div>
                 <div class="card">
                     <div>
                         <div class="card-header"><span class="card-title">Target Dial</span><span class="region-tag">🌐 North America</span></div>
-                        <p class="card-desc" data-i18n="desc2">Elite voice AI developers focusing on instant speed-to-lead outbound qualification and CRM synchronization.</p>
+                        <p class="card-desc" data-i18n="desc2">Elite voice AI developers focusing on instant speed-to-lead response models.</p>
                     </div>
                     <a href="https://vapi.ai" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
                 </div>
                 <div class="card">
                     <div>
-                        <div class="card-header"><span class="card-title">OmniVoice Global</span><span class="region-tag">🇪🇺 Europe & UK</span></div>
-                        <p class="card-desc" data-i18n="desc3">Multilingual conversational infrastructure built for enterprise B2B sales pipelines and automated booking systems.</p>
+                        <div class="card-header"><span class="card-title">OmniVoice Global</span><span class="region-tag">🌐 Europe</span></div>
+                        <p class="card-desc" data-i18n="desc3">Multilingual conversational infrastructure built for enterprise sales funnels.</p>
                     </div>
                     <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
                 </div>
             </div>
         </div>
-                <div class="category-container">
+        <div class="category-container">
             <h2 class="section-title" data-i18n="cat2">Customer Support & Helpdesk Voice Agents</h2>
             <div class="grid">
                 <div class="card">
                     <div>
-                        <div class="card-header"><span class="card-title">Helpline AI</span><span class="region-tag">🇬🇧 UK & Global</span></div>
-                        <p class="card-desc" data-i18n="desc4">24/7 Tier-1 customer support automation integrating natively with Zendesk, Intercom, and custom telephony stacks.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">SupportStack Voice</span><span class="region-tag">🇦🇺 Australia & APAC</span></div>
-                        <p class="card-desc" data-i18n="desc5">Low-latency conversational agents designed to deflect routine tickets and resolve complex customer inquiries seamlessly.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">EchoDesk Solutions</span><span class="region-tag">🇨🇦 Canada & US</span></div>
-                        <p class="card-desc" data-i18n="desc6">Voice agent architectures engineered for high-volume retail and e-commerce post-purchase logistics support.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-container">
-            <h2 class="section-title" data-i18n="cat3">Real Estate & Vertical Automation</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">PropVoice Solutions</span><span class="region-tag">🇺🇸 US & CA</span></div>
-                        <p class="card-desc" data-i18n="desc7">Specialized in automated inbound lead qualification, MLS database lookups, and property tour scheduling.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">EmergencyLine AI</span><span class="region-tag">🌐 Global</span></div>
-                        <p class="card-desc" data-i18n="desc8">24/7 emergency dispatch voice agents for HVAC, plumbing, and critical contractor field-service routing.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">TradeStack Systems</span><span class="region-tag">🇪🇺 EU & Latam</span></div>
-                        <p class="card-desc" data-i18n="desc9">Voice infrastructure builders focused on automated quote generation and localized multi-language customer intake.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-container">
-            <h2 class="section-title" data-i18n="cat4">Healthcare & Medical Clinic Voice Agents</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">MediCall AI</span><span class="region-tag">🇺🇸 US & Global</span></div>
-                        <p class="card-desc" data-i18n="desc10">HIPAA-compliant conversational voice agents built for automated patient appointment scheduling and clinic triage.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">Cliniva Voice</span><span class="region-tag">🇪🇺 Europe</span></div>
-                        <p class="card-desc" data-i18n="desc11">Multilingual medical receptionists integrated with EHR/EMR systems to manage prescription refills and patient reminders.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-container">
-            <h2 class="section-title" data-i18n="cat5">Legal Intake & Professional Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">JurisVoice Legal</span><span class="region-tag">🌐 North America</span></div>
-                        <p class="card-desc" data-i18n="desc12">Automated legal intake agents screening potential plaintiffs 24/7 and synchronizing case data directly with practice management software.</p>
-                    </div>
-                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-header"><span class="card-title">LexiCall Partners</span><span class="region-tag">🇬🇧 UK & Commonwealth</span></div>
-                        <p class="card-desc" data-i18n="desc13">Professional conversational bots designed for law firms and accounting practices to handle initial consultations and client onboarding.</p>
+                        <div class="card-header"><span class="card-title">Helpline AI</span><span class="region-tag">🌐 UK</span></div>
+                        <p class="card-desc" data-i18n="desc4">24/7 Tier-1 customer support automation integrating natively with CRM databases.</p>
                     </div>
                     <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
                 </div>
             </div>
         </div>
     </main>
-
     <footer>
-        <p data-i18n="footer">&copy; 2026 Global B2B AI Voice Directory. All rights reserved. Powered by Vercel & GitHub.</p>
+        <p>&copy; 2026 Global B2B AI Voice Agency Directory. All rights reserved.</p>
     </footer>
-
-    <script>
-        const translations = {
-            en: {
-                title: "Global B2B AI Voice Agency Directory",
-                subtitle: "The definitive global index connecting enterprises with elite conversational AI partners, Vapi developers, and voice automation experts.",
-                cat1: "Inbound Sales & Lead Qualification",
-                cat2: "Customer Support & Helpdesk Voice Agents",
-                cat3: "Real Estate & Vertical Automation",
-                cat4: "Healthcare & Medical Clinic Voice Agents",
-                cat5: "Legal Intake & Professional Services",
-                desc1: "Specializing in automated voice workflows and high-concurrency Retell deployments handling over 600,000+ sales calls.",
-                desc2: "Elite voice AI developers focusing on instant speed-to-lead outbound qualification and CRM synchronization.",
-                desc3: "Multilingual conversational infrastructure built for enterprise B2B sales pipelines and automated booking systems.",
-                desc4: "24/7 Tier-1 customer support automation integrating natively with Zendesk, Intercom, and custom telephony stacks.",
-                desc5: "Low-latency conversational agents designed to deflect routine tickets and resolve complex customer inquiries seamlessly.",
-                desc6: "Voice agent architectures engineered for high-volume retail and e-commerce post-purchase logistics support.",
-                desc7: "Specialized in automated inbound lead qualification, MLS database lookups, and property tour scheduling.",
-                desc8: "24/7 emergency dispatch voice agents for HVAC, plumbing, and critical contractor field-service routing.",
-                desc9: "Voice infrastructure builders focused on automated quote generation and localized multi-language customer intake.",
-                desc10: "HIPAA-compliant conversational voice agents built for automated patient appointment scheduling and clinic triage.",
-                desc11: "Multilingual medical receptionists integrated with EHR/EMR systems to manage prescription refills and patient reminders.",
-                desc12: "Automated legal intake agents screening potential plaintiffs 24/7 and synchronizing case data directly with practice management software.",
-                desc13: "Professional conversational bots designed for law firms and accounting practices to handle initial consultations and client onboarding.",
-                btn: "Visit Partner Agency",
-                footer: "© 2026 Global B2B AI Voice Directory. All rights reserved. Powered by Vercel & GitHub."
-            },
-            es: {
-                title: "Directorio Global de Agencias de IA de Voz B2B",
-                subtitle: "El índice global definitivo que conecta a empresas con socios expertos en IA conversacional, desarrolladores de Vapi y automatización de voz.",
-                cat1: "Ventas Entrantes y Calificación de Leads",
-                cat2: "Agentes de Voz para Atención al Cliente y Helpdesk",
-                cat3: "Automatización Inmobiliaria y Verticales",
-                cat4: "Agentes de Voz para Sanidad y Clínicas Médicas",
-                cat5: "Recepción Legal y Servicios Profesionales",
-                desc1: "Especializados en flujos de voz automatizados y despliegues masivos de Retell gestionando más de 600.000 llamadas de ventas.",
-                desc2: "Desarrolladores expertos en IA de voz enfocados en la cualificación instantánea de clientes potenciales y sincronización con CRM.",
-                desc3: "Infraestructura conversacional multilingüe diseñada para embudos de ventas B2B corporativos y sistemas de reservas automatizados.",
-                desc4: "Automatización de soporte técnico 24/7 integrada de forma nativa con Zendesk, Intercom y sistemas de telefonía personalizados.",
-                desc5: "Agentes conversacionales de baja latencia diseñados para desviar tickets rutinarios y resolver consultas complejas sin fricciones.",
-                desc6: "Arquitecturas de agentes de voz diseñadas para la logística post-venta en e-commerce y retail de alto volumen.",
-                desc7: "Especializados en cualificación automática de leads inmobiliarios, consultas en bases de datos MLS y programación de visitas.",
-                desc8: "Agentes de voz para despacho de emergencias 24/7 en climatización, fontanería y servicios técnicos críticos en campo.",
-                desc9: "Constructores de infraestructura de voz enfocados en la generación automática de presupuestos y recepción multilingüe.",
-                desc10: "Agentes de voz conversacionales con cumplimiento normativo diseñados para la gestión automatizada de citas de pacientes y triaje.",
-                desc11: "Recepcionistas médicas multilingües integradas con sistemas EHR/EMR para gestionar renovaciones de recetas y recordatorios.",
-                desc12: "Agentes automatizados de admisión legal que filtran potenciales clientes 24/7 y sincronizan datos con software de gestión.",
-                desc13: "Bots conversacionales profesionales diseñados para despachos de abogados y asesorías para gestionar consultas iniciales.",
-                btn: "Visitar Agencia Partner",
-                footer: "© 2026 Directorio Global de Voz B2B. Todos los derechos reservados. Impulsado por Vercel y GitHub."
-            },
-            fr: {
-                title: "Annuaire Mondial des Agences Vocales IA B2B",
-                subtitle: "L'index mondial définitif connectant les entreprises avec des partenaires d'IA conversationnelle d'élite et des développeurs Vapi.",
-                cat1: "Ventes Entrantes & Qualification de Leads",
-                cat2: "Agents Vocaux de Support Client & Helpdesk",
-                cat3: "Immobilier & Automatisation Verticale",
-                cat4: "Agents Vocaux pour la Santé et les Cliniques",
-                cat5: "Admission Juridique & Services Professionnels",
-                desc1: "Spécialisé dans les flux vocaux automatisés et les déploiements Retell à haute concurrence gérant plus de 600 000 appels.",
-                desc2: "Développeurs d'IA vocale d'élite se concentrant sur la qualification rapide des leads sortants et la synchronisation CRM.",
-                desc3: "Infrastructure conversationnelle multilingue conçue pour les pipelines de vente B2B d'entreprise.",
-                desc4: "Automatisation du support client 24/7 s'intégrant nativement à Zendesk, Intercom et aux piles téléphoniques.",
-                desc5: "Agents conversationnels à faible latence conçus pour dévier les tickets de routine et résoudre les demandes complexes.",
-                desc6: "Architectures d'agents vocaux conçues pour la prise en charge logistique après-vente e-commerce à fort volume.",
-                desc7: "Spécialisé dans la qualification automatique de leads immobiliers, les recherches MLS et la planification de visites.",
-                desc8: "Agents vocaux d'intervention d'urgence 24/7 pour le CVC, la plomberie et le routage des techniciens sur le terrain.",
-                desc9: "Constructeurs d'infrastructures vocales axés sur la génération automatisée de devis et l'accueil multilingue.",
-                desc10: "Agents vocaux conversationnels conçus pour la prise de rendez-vous automatisée des patients et le triage en clinique.",
-                desc11: "Réceptionnistes médicales multilingues intégrées aux systèmes EHR/EMR pour gérer les renouvellements d'ordonnances.",
-                desc12: "Agents d'admission juridique automatisés filtrant les plaignants potentiels 24/7 et synchronisant les données.",
-                desc13: "Bots conversationnels professionnels conçus pour les cabinets d'avocats pour gérer les consultations initiales.",
-                btn: "Visiter l'Agence Partenaire",
-                footer: "© 2026 Annuaire Vocal B2B. Tous droits réservés. Propulsé par Vercel & GitHub."
-            },
-            de: {
-                title: "Globales B2B KI-Sprachagentur-Verzeichnis",
-                subtitle: "Der definitive globale Index, der Unternehmen mit erstklassigen Conversational-KI-Partnern und Vapi-Entwicklern verbindet.",
-                cat1: "Inbound-Vertrieb & Lead-Qualifizierung",
-                cat2: "Kundensupport & Helpdesk-Sprachagenten",
-                cat3: "Immobilien & Vertikale Automatisierung",
-                cat4: "KI-Sprachagenten für das Gesundheitswesen",
-                cat5: "Rechtliche Erstberatung & Professionelle Dienste",
-                desc1: "Spezialisiert auf automatisierte Sprach-Workflows und Retell-Bereitstellungen für über 600.000 Verkaufsgespräche.",
-                desc2: "Elite-KI-Sprachentwickler mit Fokus auf Outbound-Qualifizierung und CRM-Synchronisation.",
-                desc3: "Mehrsprachige Conversational-Infrastruktur für B2B-Vertriebspipelines und automatisierte Buchungssysteme.",
-                desc4: "24/7-Kundensupport-Automatisierung mit nativer Integration in Zendesk, Intercom und Telefonie-Stacks.",
-                desc5: "Latenzarme Conversational-Agenten zur Entlastung von Routinetickets und nahtlosen Lösung von Kundenanfragen.",
-                desc6: "Sprachagenten-Architekturen für hochvolumigen E-Commerce und After-Sales-Logistiksupport.",
-                desc7: "Spezialisiert auf automatisierte Inbound-Lead-Qualifizierung, MLS-Abfragen und Besichtigungstermine.",
-                desc8: "24/7-Notfall-Dispatcher-Sprachagenten für HLK, Sanitär und kritische Außendienst-Einsatzplanung.",
-                desc9: "Sprachinfrastruktur-Entwickler mit Fokus auf automatisierte Angebotsgenerierung und mehrsprachige Kundenannahme.",
-                desc10: "Konversationssprachagenten für die automatisierte Terminverplanung von Patienten und Klinik-Triage.",
-                desc11: "Mehrsprachige medizinische Empfangsdienstleistungen mit EHR/EMR-Integration.",
-                desc12: "Automatisierte juristische Intake-Agenten zur Vorprüfung von Mandanten rund um die Uhr.",
-                desc13: "Professionelle Conversational Bots für Anwaltskanzleien zur Erstberatung und Mandatsaufnahme.",
-                btn: "Partneragentur besuchen",
-                footer: "© 2026 Globales B2B-Sprachverzeichnis. Alle Rechte vorbehalten. Unterstützt von Vercel & GitHub."
-            }
-        };
-
-        function changeLanguage(lang) {
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
-                }
-            });
-            localStorage.setItem('preferred_lang', lang);
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferred_lang');
-            const browserLang = navigator.language.slice(0, 2);
-            const defaultLang = savedLang || (translations[browserLang] ? browserLang : 'en');
-            
-            document.getElementById('languageSelect').value = defaultLang;
-            changeLanguage(defaultLang);
-        });
-    </script>
 </body>
 </html>
