@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B AI Voice Agency Directory | Top Conversational AI Partners</title>
-    <meta name="description" content="Discover and hire top-rated B2B AI voice agencies, Vapi developers, and conversational AI experts. Compare verified providers and scale your automated voice stack.">
-    <meta name="keywords" content="AI voice agency, B2B AI voice directory, hire Vapi developer, conversational AI partners, automated voice support">
+    <title>Global B2B AI Voice Agency Directory | Top Conversational Partners</title>
+    <meta name="description" content="Discover and hire top-rated global AI voice agencies, Vapi developers, and conversational automation partners for B2B scale.">
     <style>
         :root {
             --bg-color: #0f172a;
@@ -15,60 +14,126 @@
             --accent: #38bdf8;
             --border: #334155;
         }
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
             line-height: 1.5;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .lang-selector {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
         }
         header {
             text-align: center;
-            padding: 3rem 1rem 2rem 1rem;
-            border-bottom: 1px solid var(--border);
+            padding: 2rem 1rem 2rem;
             max-width: 800px;
             margin: 0 auto;
         }
-        h1 {
+        header h1 {
             font-size: 2.25rem;
             margin-bottom: 0.75rem;
             color: var(--text-primary);
         }
-        h2 {
-            font-size: 1.1rem;
-            font-weight: normal;
+        header p {
             color: var(--text-secondary);
-            margin: 0;
+            font-size: 1.1rem;
         }
         main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .category-container {
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            color: var(--accent);
+        }
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 0.75rem;
+            border-radius: 12px;
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
-        .card h3 {
-            margin-top: 0;
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .region-tag {
+            font-size: 0.75rem;
+            background: rgba(56, 189, 248, 0.1);
             color: var(--accent);
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+            font-weight: 500;
         }
-        .card p {
+        .card-desc {
             color: var(--text-secondary);
             font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-card {
+            display: inline-block;
+            text-align: center;
+            background-color: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .btn-card:hover {
+            background-color: var(--accent);
+            color: var(--bg-color);
         }
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 1rem;
             color: var(--text-secondary);
             font-size: 0.85rem;
             border-top: 1px solid var(--border);
@@ -78,37 +143,126 @@
 </head>
 <body>
 
-    <header>
-        <h1>The Definitive B2B AI Voice Agency Directory</h1>
-        <h2>Connect with verified conversational AI partners, Vapi specialists, and automated voice infrastructure experts to scale your business.</h2>
-    </header>
+    <div class="top-bar">
+        <select id="languageSelect" class="lang-selector" onchange="changeLanguage(this.value)">
+            <option value="en">English 🇬🇧</option>
+            <option value="es">Español 🇪🇸</option>
+            <option value="fr">Français 🇫🇷</option>
+            <option value="de">Deutsch 🇩🇪</option>
+        </select>
+    </div>
 
+    <header>
+        <h1 data-i18n="title">Global B2B AI Voice Agency Directory</h1>
+        <p data-i18n="subtitle">The definitive global index connecting enterprises with elite conversational AI partners, Vapi developers, and voice automation experts.</p>
+    </header>
     <main>
-        <div class="card">
-            <div>
-                <h3>Top Agency Spot 1</h3>
-                <p>Specialized in high-volume outbound Vapi voice agents and automated CRM routing for enterprise sales.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <h3>Top Agency Spot 2</h3>
-                <p>Custom conversational AI workflows, ElevenLabs voice cloning integrations, and 24/7 multilingual support lines.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <h3>Top Agency Spot 3</h3>
-                <p>Turnkey phone automation solutions for medical clinics, local services, and high-ticket appointment scheduling.</p>
+        <div class="category-container">
+            <h2 class="section-title" data-i18n="cat1">Inbound Sales & Lead Qualification</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <div class="card-header">
+                            <span class="card-title">Arose AI</span>
+                            <span class="region-tag">🇺🇸 Global / US</span>
+                        </div>
+                        <p class="card-desc" data-i18n="desc1">Specializing in automated voice workflows and high-concurrency Retell deployments handling over 600,000+ sales calls.</p>
+                    </div>
+                    <a href="https://retellai.com" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-header">
+                            <span class="card-title">Target Dial</span>
+                            <span class="region-tag">🌐 North America</span>
+                        </div>
+                        <p class="card-desc" data-i18n="desc2">Elite voice AI developers focusing on instant speed-to-lead outbound qualification and CRM synchronization.</p>
+                    </div>
+                    <a href="https://vapi.ai" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-header">
+                            <span class="card-title">OmniVoice Global</span>
+                            <span class="region-tag">🇪🇺 Europe & UK</span>
+                        </div>
+                        <p class="card-desc" data-i18n="desc3">Multilingual conversational infrastructure built for enterprise B2B sales pipelines and automated booking systems.</p>
+                    </div>
+                    <a href="#" target="_blank" class="btn-card" data-i18n="btn">Visit Partner Agency</a>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Voice Stack Directory. An independent B2B index for conversational AI.</p>
+        <p data-i18n="footer">&copy; 2026 Global B2B AI Voice Directory. All rights reserved. Powered by Vercel & GitHub.</p>
     </footer>
 
-    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+        const translations = {
+            en: {
+                title: "Global B2B AI Voice Agency Directory",
+                subtitle: "The definitive global index connecting enterprises with elite conversational AI partners, Vapi developers, and voice automation experts.",
+                cat1: "Inbound Sales & Lead Qualification",
+                desc1: "Specializing in automated voice workflows and high-concurrency Retell deployments handling over 600,000+ sales calls.",
+                desc2: "Elite voice AI developers focusing on instant speed-to-lead outbound qualification and CRM synchronization.",
+                desc3: "Multilingual conversational infrastructure built for enterprise B2B sales pipelines and automated booking systems.",
+                btn: "Visit Partner Agency",
+                footer: "© 2026 Global B2B AI Voice Directory. All rights reserved. Powered by Vercel & GitHub."
+            },
+            es: {
+                title: "Directorio Global de Agencias de IA de Voz B2B",
+                subtitle: "El índice global definitivo que conecta a empresas con socios expertos en IA conversacional, desarrolladores de Vapi y automatización de voz.",
+                cat1: "Ventas Entrantes y Calificación de Leads",
+                desc1: "Especializados en flujos de voz automatizados y despliegues masivos de Retell gestionando más de 600.000 llamadas de ventas.",
+                desc2: "Desarrolladores expertos en IA de voz enfocados en la cualificación instantánea de clientes potenciales y sincronización con CRM.",
+                desc3: "Infraestructura conversacional multilingüe diseñada para embudos de ventas B2B corporativos y sistemas de reservas automatizados.",
+                btn: "Visitar Agencia Partner",
+                footer: "© 2026 Directorio Global de Voz B2B. Todos los derechos reservados. Impulsado por Vercel y GitHub."
+            },
+            fr: {
+                title: "Annuaire Mondial des Agences Vocales IA B2B",
+                subtitle: "L'index mondial définitif connectant les entreprises avec des partenaires d'IA conversationnelle d'élite et des développeurs Vapi.",
+                cat1: "Ventes Entrantes & Qualification de Leads",
+                desc1: "Spécialisé dans les flux vocaux automatisés et les déploiements Retell à haute concurrence gérant plus de 600 000 appels.",
+                desc2: "Développeurs d'IA vocale d'élite se concentrant sur la qualification rapide des leads sortants et la synchronisation CRM.",
+                desc3: "Infrastructure conversationnelle multilingue conçue pour les pipelines de vente B2B d'entreprise.",
+                btn: "Visiter l'Agence Partenaire",
+                footer: "© 2026 Annuaire Vocal B2B. Tous droits réservés. Propulsé par Vercel & GitHub."
+            },
+            de: {
+                title: "Globales B2B KI-Sprachagentur-Verzeichnis",
+                subtitle: "Der definitive globale Index, der Unternehmen mit erstklassigen Conversational-KI-Partnern und Vapi-Entwicklern verbindet.",
+                cat1: "Inbound-Vertrieb & Lead-Qualifizierung",
+                desc1: "Spezialisiert auf automatisierte Sprach-Workflows und Retell-Bereitstellungen für über 600.000 Verkaufsgespräche.",
+                desc2: "Elite-KI-Sprachentwickler mit Fokus auf Outbound-Qualifizierung und CRM-Synchronisation.",
+                desc3: "Mehrsprachige Conversational-Infrastruktur für B2B-Vertriebspipelines und automatisierte Buchungssysteme.",
+                btn: "Partneragentur besuchen",
+                footer: "© 2026 Globales B2B-Sprachverzeichnis. Alle Rechte vorbehalten. Unterstützt von Vercel & GitHub."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang');
+            const browserLang = navigator.language.slice(0, 2);
+            const defaultLang = savedLang || (translations[browserLang] ? browserLang : 'en');
+            
+            document.getElementById('languageSelect').value = defaultLang;
+            changeLanguage(defaultLang);
+        });
+    </script>
 </body>
 </html>
