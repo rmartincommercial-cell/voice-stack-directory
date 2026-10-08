@@ -35,7 +35,7 @@
             </nav>
 
             <div class="flex items-center space-x-4">
-                <!-- Selector Manual (por si el usuario desea cambiarlo) -->
+                <!-- Selector Manual de Idioma -->
                 <select id="langSwitch" onchange="switchLanguage(this.value)" class="bg-slate-800 border border-slate-700 text-xs rounded-lg px-2 py-1 text-slate-300 focus:outline-none focus:border-indigo-500">
                     <option value="es">🇪🇸 ES</option>
                     <option value="en">🇬🇧 EN</option>
@@ -121,10 +121,10 @@
                     <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_sector">Sector Principal / Especialidad</label>
                     <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
                         <option value="salud" data-i18n="sec_health">Salud y Bienestar</option>
-                        <option value="hogar" data-i18n="sec_home">Construcción y Servicios para el Hogar</option>
+                        <option value="construccion" data-i18n="sec_construction">Construcción y Gremios</option>
+                        <option value="hosteleria" data-i18n="sec_hospitality">Hostelería y Ocio</option>
                         <option value="legal" data-i18n="sec_legal">Legal y Jurídico</option>
                         <option value="inmo" data-i18n="sec_realestate">Inmobiliario y Proptech</option>
-                        <option value="finanzas" data-i18n="sec_finance">Finanzas y Seguros</option>
                     </select>
                 </div>
                 <div>
@@ -143,7 +143,7 @@
         <p>&copy; 2026 VoiceStack B2B Global Directory. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- SCRIPT DE DETECCIÓN AUTOMÁTICA Y LÓGICA -->
+    <!-- SCRIPT DE DETECCIÓN Y DATOS COMPLETOS -->
     <script>
         const translations = {
             es: {
@@ -169,10 +169,10 @@
                 form_message: "Mensaje o Enlace a tu Web/GitHub",
                 form_submit: "Enviar Solicitud de Ingreso",
                 sec_health: "Salud y Bienestar",
-                sec_home: "Construcción y Servicios para el Hogar",
+                sec_construction: "Construcción y Gremios",
+                sec_hospitality: "Hostelería y Ocio",
                 sec_legal: "Legal y Jurídico",
-                sec_realestate: "Inmobiliario y Proptech",
-                sec_finance: "Finanzas y Seguros"
+                sec_realestate: "Inmobiliario y Proptech"
             },
             en: {
                 badge_global: "B2B Global",
@@ -197,22 +197,21 @@
                 form_message: "Message or Web/GitHub Link",
                 form_submit: "Submit Application",
                 sec_health: "Health & Wellness",
-                sec_home: "Home Services & Construction",
+                sec_construction: "Construction & Trades",
+                sec_hospitality: "Hospitality & Leisure",
                 sec_legal: "Legal & Law",
-                sec_realestate: "Real Estate & Proptech",
-                sec_finance: "Finance & Insurance"
+                sec_realestate: "Real Estate & Proptech"
             }
         };
 
         let currentLang = 'es';
 
-        // Detectar idioma automáticamente según el navegador/ubicación del visitante
         function detectUserLanguage() {
             const browserLang = navigator.language || navigator.userLanguage || 'es';
             if (browserLang.startsWith('es')) {
                 currentLang = 'es';
             } else {
-                currentLang = 'en'; // Por defecto inglés para el resto del mundo
+                currentLang = 'en';
             }
             document.getElementById('langSwitch').value = currentLang;
         }
@@ -232,13 +231,13 @@
         const top10Data = [
             { id: "01", name: "Evolvv IA", desc: "Flujos conversacionales avanzados para empresas estadounidenses.", tag: "Socio verificado" },
             { id: "02", name: "Flowstate Healthcare AI", desc: "Clasificación médica y programación de citas por voz.", tag: "Socio verificado" },
-            { id: "03", name: "AutomateX360", desc: "Vapi & Retell son expertos en servicios a domicilio.", tag: "Socio verificado" },
+            { id: "03", name: "AutomateX360", desc: "Vapi & Retell son expertos en servicios a domicilio y gremios.", tag: "Socio verificado" },
             { id: "04", name: "LegalVoice América", desc: "Automatización de la recepción para bufetes de abogados.", tag: "Socio verificado" },
             { id: "05", name: "VoiceMetrics Global", desc: "Analítica conversacional en tiempo real para centros de llamadas.", tag: "Socio verificado" },
             { id: "06", name: "ApexVoice Systems", desc: "Despliegue multinacional de agentes de voz en español e inglés.", tag: "Socio verificado" },
             { id: "07", name: "InmoVoice AI", desc: "Cualificación automática de leads inmobiliarios 24/7.", tag: "Socio verificado" },
             { id: "08", name: "FinVoice Pro", desc: "Automatización de atención al cliente bancario y de seguros.", tag: "Socio verificado" },
-            { id: "09", name: "RetailVoice 360", desc: "Gestión de pedidos y soporte logístico mediante voz inteligente.", tag: "Socio verificado" },
+            { id: "09", name: "HospitalityVoice 360", desc: "Reservas automatizadas para hoteles y restaurantes.", tag: "Socio verificado" },
             { id: "10", name: "NexusVoice Labs", desc: "Desarrollo de modelos vocales personalizados y latencia ultrabaja.", tag: "Socio verificado" }
         ];
 
@@ -265,18 +264,28 @@
                     { name: "Flowstate Healthcare AI", desc: "Sistemas avanzados de triaje automatizado." },
                     { name: "MediVoice EE. UU.", desc: "GoHighLevel integró agentes de voz para reservas." },
                     { name: "IA para el cuidado dental", desc: "Reducción de inasistencias dentales." },
-                    { name: "Voz Estética", desc: "Automatización de la recepción del spa médico." },
-                    { name: "Soluciones CareCall", desc: "Triaje de la regional de salud." }
+                    { name: "Voz Estética", desc: "Automatización de la recepción del spa médico." }
                 ]
             },
             {
-                id: "hogar",
-                name: { es: "Servicios del Hogar", en: "Home Services" },
-                desc: { es: "Despacho de emergencias, cualificación de clientes y programación de contratistas.", en: "Emergency dispatch, lead qualification, and contractor scheduling." },
+                id: "construccion",
+                name: { es: "Construcción y Gremios", en: "Construction & Trades" },
+                desc: { es: "Recepción de llamadas de urgencia, cualificación de obras y gestión de presupuestos de autónomos y constructoras.", en: "Emergency call handling, project qualification, and contractor budgeting." },
                 agencies: [
-                    { name: "AutomateX360", desc: "Expertos en servicios a domicilio y emergencias." },
-                    { name: "PlumbingVoice Pro", desc: "Despacho inmediato de fontaneros 24/7." },
-                    { name: "Roofing AI Call", desc: "Cualificación de presupuestos de tejados." }
+                    { name: "AutomateX360", desc: "Expertos en servicios a domicilio y contratistas." },
+                    { name: "PlumbingVoice Pro", desc: "Despacho inmediato de fontaneros y gremios 24/7." },
+                    { name: "Roofing AI Call", desc: "Cualificación de presupuestos de reformas y tejados." },
+                    { name: "BuildVoice Solutions", desc: "Gestión de incidencias y parte de obra por voz." }
+                ]
+            },
+            {
+                id: "hosteleria",
+                name: { es: "Hostelería y Ocio", en: "Hospitality & Leisure" },
+                desc: { es: "Gestión automatizada de reservas de mesas, pedidos para llevar y atención al cliente en hoteles y restaurantes.", en: "Automated table reservations, takeout orders, and customer support for hotels and restaurants." },
+                agencies: [
+                    { name: "HospitalityVoice 360", desc: "Asistentes de voz para reservas hoteleras y check-in." },
+                    { name: "RestoBot AI", desc: "Recepción telefónica y gestión de pedidos de comida." },
+                    { name: "NightlifeVoice Pro", desc: "Control de aforos y listas VIP automatizadas por voz." }
                 ]
             },
             {
@@ -339,7 +348,6 @@
             e.target.reset();
         }
 
-        // Inicializar al cargar: detecta idioma, aplica traducciones y renderiza
         window.addEventListener('DOMContentLoaded', () => {
             detectUserLanguage();
             switchLanguage(currentLang);
