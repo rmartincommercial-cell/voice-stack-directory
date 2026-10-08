@@ -1,358 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global B2B AI Voice Agency Directory</title>
+    <title>VoiceStack B2B Global Directory</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 500: '#6366f1', 600: '#4f46e5' }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- HEADER / HERO -->
-    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                    VoiceStack Directory
-                </span>
-                <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-medium hidden sm:inline-block">Global B2B</span>
+                <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">VoiceStack</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20" data-i18n="badge_global">B2B Global</span>
             </div>
-            <nav class="flex items-center space-x-4">
-                <a href="#sectors" class="text-sm font-medium text-slate-300 hover:text-white transition">Sectors</a>
-                <a href="#top10" class="text-sm font-medium text-indigo-400 hover:text-indigo-300 transition">Top 10 Showcase</a>
-                <a href="https://lemonsqueezy.com" target="_blank" class="text-xs sm:text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-indigo-500/20">
-                    Claim Spotlight
-                </a>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="#top10" class="hover:text-white transition" data-i18n="nav_top10">Top 10 Mejores</a>
+                <a href="#sectors" class="hover:text-white transition" data-i18n="nav_sectors">Sectores</a>
+                <a href="#contact" class="hover:text-white transition" data-i18n="nav_contact">Contacto Agencias</a>
             </nav>
+
+            <div class="flex items-center space-x-4">
+                <!-- Selector Manual (por si el usuario desea cambiarlo) -->
+                <select id="langSwitch" onchange="switchLanguage(this.value)" class="bg-slate-800 border border-slate-700 text-xs rounded-lg px-2 py-1 text-slate-300 focus:outline-none focus:border-indigo-500">
+                    <option value="es">🇪🇸 ES</option>
+                    <option value="en">🇬🇧 EN</option>
+                </select>
+
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition shadow-lg shadow-indigo-500/20" data-i18n="nav_claim">
+                    Reclamar el foco
+                </a>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
-        <!-- HERO SECTION -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
-                Top Conversational AI & <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">Voice Partners</span>
-            </h1>
-            <p class="text-lg text-slate-400 mb-8">
-                Curated directory connecting enterprises with elite voice automation developers, Vapi experts, and specialized B2B agencies worldwide.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#sectors" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium px-6 py-3 rounded-xl transition">
-                    Explore Sectors (50+ Agencies)
-                </a>
-                <a href="#top10" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg shadow-indigo-500/25">
-                    View Top 10 Spotlight
-                </a>
+    <!-- HERO SECTION -->
+    <section class="py-16 px-4 text-center max-w-4xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6" data-i18n="hero_title">
+            Principales socios en IA conversacional y voz
+        </h1>
+        <p class="text-base sm:text-lg text-slate-400 mb-8" data-i18n="hero_desc">
+            Directorio especializado que conecta a empresas con desarrolladores de automatización de voz de élite, expertos en Vapi y agencias B2B especializadas en todo el mundo.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#sectors" class="px-6 py-3 text-sm font-medium bg-slate-900 border border-slate-800 hover:bg-slate-800 rounded-xl transition text-slate-200" data-i18n="hero_btn_sectors">
+                Explorar sectores (50+ agencias)
+            </a>
+            <a href="#top10" class="px-6 py-3 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition shadow-lg shadow-indigo-600/30" data-i18n="hero_btn_top10">
+                Ver los 10 mejores destacados
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TOP 10 COMPLETO -->
+    <section id="top10" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-900">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                    <span>⭐</span> <span data-i18n="top10_title">Top 10 Mejores Ejemplos</span>
+                </h2>
+                <p class="text-sm text-slate-400 mt-1" data-i18n="top10_subtitle">Máxima visibilidad en búsquedas empresariales globales de alta intención.</p>
             </div>
+            <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full" data-i18n="top10_badge">10 espacios activos</span>
         </div>
 
-        <!-- TOP 10 PORTADA SPOTLIGHT BANNER -->
-        <section id="top10" class="mb-20 bg-gradient-to-b from-indigo-950/40 to-slate-900/60 border border-indigo-500/20 rounded-2xl p-6 sm:p-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                        <span>🌟</span> Homepage Top 10 Showcase
-                    </h2>
-                    <p class="text-sm text-slate-400 mt-1">Prime visibility across global high-intent enterprise searches.</p>
-                </div>
-                <span class="mt-4 md:mt-0 text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    Active Subscription Slots
-                </span>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <!-- Top Slots Mockup Cards -->
-                <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-indigo-400">#01 SPOTLIGHT</span>
-                        <h3 class="font-bold text-white mt-1">Evolvv AI</h3>
-                        <p class="text-xs text-slate-400 mt-1">Advanced conversational flows for US enterprises.</p>
-                    </div>
-                    <span class="text-xs text-emerald-400 mt-4 font-medium flex items-center gap-1">● Verified Partner</span>
-                </div>
-                <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-indigo-400">#02 SPOTLIGHT</span>
-                        <h3 class="font-bold text-white mt-1">Flowstate Healthcare AI</h3>
-                        <p class="text-xs text-slate-400 mt-1">Medical triage & voice scheduling.</p>
-                    </div>
-                    <span class="text-xs text-emerald-400 mt-4 font-medium flex items-center gap-1">● Verified Partner</span>
-                </div>
-                <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-indigo-400">#03 SPOTLIGHT</span>
-                        <h3 class="font-bold text-white mt-1">AutomateX360</h3>
-                        <p class="text-xs text-slate-400 mt-1">Vapi & Retell experts for home services.</p>
-                    </div>
-                    <span class="text-xs text-emerald-400 mt-4 font-medium flex items-center gap-1">● Verified Partner</span>
-                </div>
-                <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-indigo-400">#04 SPOTLIGHT</span>
-                        <h3 class="font-bold text-white mt-1">LegalVoice America</h3>
-                        <p class="text-xs text-slate-400 mt-1">Intake automation for US law firms.</p>
-                    </div>
-                    <span class="text-xs text-emerald-400 mt-4 font-medium flex items-center gap-1">● Verified Partner</span>
-                </div>
-                <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-indigo-400">#05-10 SLOTS</span>
-                        <h3 class="font-bold text-white mt-1">Available Spots</h3>
-                        <p class="text-xs text-slate-400 mt-1">Join the priority waiting list via Lemon Squeezy.</p>
-                    </div>
-                    <a href="https://lemonsqueezy.com" target="_blank" class="text-xs bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-1.5 px-3 rounded text-center mt-4 transition">
-                        Secure Slot
-                    </a>
-                </div>
-            </div>
-        </section>
+        <!-- Grid Top 10 Completo (1 al 10) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4" id="top10Grid"></div>
+    </section>
 
-        <!-- SECTORS LISTING CONTAINER -->
-        <div id="sectors" class="space-y-16">
-
-            <!-- 1. HEALTHCARE & WELLNESS -->
-            <section class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 sm:p-8">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 border-b border-slate-800 pb-4">
-                    <div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-white">🏥 Healthcare & Wellness</h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Voice automation, patient intake, and clinic scheduling.</p>
-                    </div>
-                    <span class="text-xs text-slate-400 mt-2 sm:mt-0 bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">10 Listed Partners</span>
-                </div>
-
-                <!-- Priority Zone -->
-                <div class="mb-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-3 block">★ Priority Featured Partners</span>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">Flowstate Healthcare AI</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">Advanced automated triage & phone workflows for US clinics.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">MediVoice US</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">GoHighLevel integrated voice agents for 24/7 patient booking.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Standard Directory (Collapsible/Ver más) -->
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 block">Verified Directory Listings</span>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">DentalCare AI</strong><span class="text-xs text-slate-400">Dental no-show reduction</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">AestheticVoice</strong><span class="text-xs text-slate-400">Med-spa front desk automation</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">CareCall Solutions</strong><span class="text-xs text-slate-400">Regional health network triage</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">WellnessBot USA</strong><span class="text-xs text-slate-400">Mental health intake support</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">TherapyVoice Pro</strong><span class="text-xs text-slate-400">Confidential appointment filtering</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">NuHealth AI</strong><span class="text-xs text-slate-400">Ambulatory clinic call routing</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">PrimeMed Voice</strong><span class="text-xs text-slate-400">Multi-specialty practice switchboard</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">Apex Health Automations</strong><span class="text-xs text-slate-400">Vapi integrations for healthcare</span></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 2. CONSTRUCTION & TRADES -->
-            <section class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 sm:p-8">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 border-b border-slate-800 pb-4">
-                    <div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-white">🔨 Construction & Home Services</h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Emergency dispatch, lead qualification, and contractor scheduling.</p>
-                    </div>
-                    <span class="text-xs text-slate-400 mt-2 sm:mt-0 bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">10 Listed Partners</span>
-                </div>
-
-                <!-- Priority Zone -->
-                <div class="mb-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-3 block">★ Priority Featured Partners</span>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">AutomateX360</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">Vapi & Retell voice agents for HVAC, roofing, and plumbing.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">HomeServices Voice AI</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">Nighttime emergency dispatch and lead capturing for contractors.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Standard Directory -->
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 block">Verified Directory Listings</span>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">HVAC Voice Pros</strong><span class="text-xs text-slate-400">Climate control receptionists</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">RoofingBot US</strong><span class="text-xs text-slate-400">Instant roofing quote qualification</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">PlumbingCall AI</strong><span class="text-xs text-slate-400">24/7 plumber emergency routing</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">SolarVoice Connect</strong><span class="text-xs text-slate-400">Outbound appointment setter for solar</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">ContractorVoice Hub</strong><span class="text-xs text-slate-400">Remodeling follow-up calls</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">ElectricianBot USA</strong><span class="text-xs text-slate-400">Metro area electrician dispatch</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">BuildFlow AI</strong><span class="text-xs text-slate-400">Subcontractor site coordination</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">TradeVoice Solutions</strong><span class="text-xs text-slate-400">Self-managed voice systems</span></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. PROFESSIONAL SERVICES -->
-            <section class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 sm:p-8">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 border-b border-slate-800 pb-4">
-                    <div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-white">⚖️ Professional Services</h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Legal intake, CPA tax season automation, and client filtering.</p>
-                    </div>
-                    <span class="text-xs text-slate-400 mt-2 sm:mt-0 bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">10 Listed Partners</span>
-                </div>
-
-                <!-- Priority Zone -->
-                <div class="mb-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-3 block">★ Priority Featured Partners</span>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">LegalVoice America</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">Formal intake and personal injury case screening for law firms.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">TaxBot US</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">High-volume call automation for CPA firms during tax season.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Standard Directory -->
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 block">Verified Directory Listings</span>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">Inbound Legal AI</strong><span class="text-xs text-slate-400">24/7 law firm client acquisition</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">CPA Voice Assist</strong><span class="text-xs text-slate-400">Certified public accountant booking</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">NotaryVoice Hub</strong><span class="text-xs text-slate-400">Remote notary signature coordination</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">ConsultingCall US</strong><span class="text-xs text-slate-400">Business consulting client qualification</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">EstateVoice AI</strong><span class="text-xs text-slate-400">Wealth management call reception</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">ArbitrationBot</strong><span class="text-xs text-slate-400">Mediation & court schedule sync</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">ComplianceVoice</strong><span class="text-xs text-slate-400">Automated regulatory audit calls</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">Advisory AI Lab</strong><span class="text-xs text-slate-400">Conversational bots for financial advisors</span></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. HOSPITALITY & LEISURE -->
-            <section class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 sm:p-8">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 border-b border-slate-800 pb-4">
-                    <div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-white">🍽️ Hospitality & Leisure</h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Multilingual hotel concierge, restaurant bookings, and reservations.</p>
-                    </div>
-                    <span class="text-xs text-slate-400 mt-2 sm:mt-0 bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">10 Listed Partners</span>
-                </div>
-
-                <!-- Priority Zone -->
-                <div class="mb-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-3 block">★ Priority Featured Partners</span>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">HospitalityVoice US</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">High-volume table bookings and multilingual hotel concierge.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">ResyVoice AI</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">Table reservation confirmation and waiting list automation.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Standard Directory -->
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 block">Verified Directory Listings</span>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">ConciergeBot America</strong><span class="text-xs text-slate-400">24/7 guest service & room service</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">EventVoice US</strong><span class="text-xs text-slate-400">Corporate events & wedding coordination</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">BistroCall Pro</strong><span class="text-xs text-slate-400">Takeout ordering & phone capacity</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">CateringVoice Hub</strong><span class="text-xs text-slate-400">Instant catering estimates</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">Nightlife AI US</strong><span class="text-xs text-slate-400">VIP table bookings & guest lists</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">TravelVoice Connect</strong><span class="text-xs text-slate-400">Voice assistants for tour operators</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">GourmetBot America</strong><span class="text-xs text-slate-400">Specialty food store orders</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">CampVoice US</strong><span class="text-xs text-slate-400">Park and camping reservation desk</span></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 5. FREELANCERS & EXPERTS -->
-            <section class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 sm:p-8">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 border-b border-slate-800 pb-4">
-                    <div>
-                        <h2 class="text-xl sm:text-2xl font-bold text-white">💻 Freelancers & Automation Experts</h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Vapi/Retell developers, Make integration specialists, and AI architects.</p>
-                    </div>
-                    <span class="text-xs text-slate-400 mt-2 sm:mt-0 bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">10 Listed Partners</span>
-                </div>
-
-                <!-- Priority Zone -->
-                <div class="mb-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-3 block">★ Priority Featured Partners</span>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">Evolvv AI</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">Complex conversational workflows and multi-agent systems for SMBs.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                        <div class="bg-slate-900 border border-indigo-500/30 p-4 rounded-xl flex justify-between items-center shadow-md">
-                            <div>
-                                <h3 class="font-semibold text-white">Vapi-Dev Studio (US)</h3>
-                                <p class="text-xs text-slate-400 mt-0.5">Ultra-low latency custom voice architecture on Vapi and Retell.</p>
-                            </div>
-                            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Featured</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Standard Directory -->
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 block">Verified Directory Listings</span>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">VoiceFlow Experts US</strong><span class="text-xs text-slate-400">Omnichannel conversational design</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">Make & Voice US</strong><span class="text-xs text-slate-400">HubSpot & GoHighLevel voice sync</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">NextGen Voice Labs</strong><span class="text-xs text-slate-400">Voice call cost optimization</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">PromptEngineer USA</strong><span class="text-xs text-slate-400">LLM tuning for telephony agents</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">AutomationBridge</strong><span class="text-xs text-slate-400">Rapid sales agent deployment</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">VoiceAPI Integrators</strong><span class="text-xs text-slate-400">Custom voice APIs & PBX</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">AI Telephony Group</strong><span class="text-xs text-slate-400">BYO-telephony cloud architecture</span></div>
-                        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-lg"><strong class="text-white block">Conversational SaaS US</strong><span class="text-xs text-slate-400">Voice SaaS product development</span></div>
-                    </div>
-                </div>
-            </section>
-
+    <!-- SECCIÓN DE SECTORES CON FILTRADO INTERACTIVO -->
+    <section id="sectors" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-900">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <span>📂</span> <span data-i18n="sectors_title">Agencias por Sectores</span>
+            </h2>
+            <p class="text-sm text-slate-400 mt-1" data-i18n="sectors_subtitle">Haz clic en un sector para desplegar y filtrar sus agencias verificadas.</p>
         </div>
 
-    </main>
+        <!-- Botones de Pestañas / Sectores -->
+        <div class="flex flex-wrap gap-2 mb-8" id="sectorTabs"></div>
+
+        <!-- Contenedor del Sector Seleccionado -->
+        <div id="sectorContentContainer" class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm"></div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO PARA AGENCIAS Y FREELANCERS -->
+    <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-900">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 rounded-2xl p-8 sm:p-12 shadow-2xl">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="contact_title">¿Eres agencia o desarrollador experto en voz?</h2>
+                <p class="text-sm text-slate-400" data-i18n="contact_desc">Postula tu perfil para formar parte del directorio global, accede a los espacios destacados de alta conversión o gestiona tu suscripción vía Lemon Squeezy.</p>
+            </div>
+            
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_name">Nombre o Agencia</label>
+                        <input type="text" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="Ej. VoiceFlow Solutions">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_email">Correo Electrónico</label>
+                        <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="contacto@agencia.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_sector">Sector Principal / Especialidad</label>
+                    <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
+                        <option value="salud" data-i18n="sec_health">Salud y Bienestar</option>
+                        <option value="hogar" data-i18n="sec_home">Construcción y Servicios para el Hogar</option>
+                        <option value="legal" data-i18n="sec_legal">Legal y Jurídico</option>
+                        <option value="inmo" data-i18n="sec_realestate">Inmobiliario y Proptech</option>
+                        <option value="finanzas" data-i18n="sec_finance">Finanzas y Seguros</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_message">Mensaje o Enlace a tu Web/GitHub</label>
+                    <textarea rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="Cuéntanos sobre tus integraciones de Vapi, Retell o automatizaciones..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm rounded-xl transition shadow-lg shadow-indigo-600/30" data-i18n="form_submit">
+                    Enviar Solicitud de Ingreso
+                </button>
+            </form>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-slate-800 mt-20 py-8 bg-slate-900/20 text-center text-xs text-slate-500">
-        <p>&copy; 2026 Global B2B AI Voice Agency Directory. All core directory slots are free. Powered by automated Lemon Squeezy webhooks.</p>
+    <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
+        <p>&copy; 2026 VoiceStack B2B Global Directory. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- SCRIPT DE DETECCIÓN AUTOMÁTICA Y LÓGICA -->
+    <script>
+        const translations = {
+            es: {
+                badge_global: "B2B Global",
+                nav_top10: "Top 10 Mejores",
+                nav_sectors: "Sectores",
+                nav_contact: "Contacto Agencias",
+                nav_claim: "Reclamar el foco",
+                hero_title: "Principales socios en IA conversacional y voz",
+                hero_desc: "Directorio especializado que conecta a empresas con desarrolladores de automatización de voz de élite, expertos en Vapi y agencias B2B especializadas en todo el mundo.",
+                hero_btn_sectors: "Explorar sectores (50+ agencias)",
+                hero_btn_top10: "Ver los 10 mejores destacados",
+                top10_title: "Top 10 Mejores Ejemplos",
+                top10_subtitle: "Máxima visibilidad en búsquedas empresariales globales de alta intención.",
+                top10_badge: "10 espacios activos",
+                sectors_title: "Agencias por Sectores",
+                sectors_subtitle: "Haz clic en un sector para desplegar y filtrar sus agencias verificadas.",
+                contact_title: "¿Eres agencia o desarrollador experto en voz?",
+                contact_desc: "Postula tu perfil para formar parte del directorio global, accede a los espacios destacados de alta conversión o gestiona tu suscripción vía Lemon Squeezy.",
+                form_name: "Nombre o Agencia",
+                form_email: "Correo Electrónico",
+                form_sector: "Sector Principal / Especialidad",
+                form_message: "Mensaje o Enlace a tu Web/GitHub",
+                form_submit: "Enviar Solicitud de Ingreso",
+                sec_health: "Salud y Bienestar",
+                sec_home: "Construcción y Servicios para el Hogar",
+                sec_legal: "Legal y Jurídico",
+                sec_realestate: "Inmobiliario y Proptech",
+                sec_finance: "Finanzas y Seguros"
+            },
+            en: {
+                badge_global: "B2B Global",
+                nav_top10: "Top 10 Best",
+                nav_sectors: "Sectors",
+                nav_contact: "Agency Contact",
+                nav_claim: "Claim Spotlight",
+                hero_title: "Leading Partners in Conversational AI & Voice",
+                hero_desc: "Specialized directory connecting companies with elite voice automation developers, Vapi experts, and specialized B2B agencies worldwide.",
+                hero_btn_sectors: "Explore Sectors (50+ agencies)",
+                hero_btn_top10: "View Top 10 Spotlight",
+                top10_title: "Top 10 Best Examples",
+                top10_subtitle: "Maximum visibility in high-intent global business searches.",
+                top10_badge: "10 active slots",
+                sectors_title: "Agencies by Sector",
+                sectors_subtitle: "Click a sector to expand and filter its verified agencies.",
+                contact_title: "Are you a voice agency or expert developer?",
+                contact_desc: "Apply to join the global directory, access high-conversion featured slots, or manage your subscription via Lemon Squeezy.",
+                form_name: "Name or Agency",
+                form_email: "Email Address",
+                form_sector: "Main Sector / Specialty",
+                form_message: "Message or Web/GitHub Link",
+                form_submit: "Submit Application",
+                sec_health: "Health & Wellness",
+                sec_home: "Home Services & Construction",
+                sec_legal: "Legal & Law",
+                sec_realestate: "Real Estate & Proptech",
+                sec_finance: "Finance & Insurance"
+            }
+        };
+
+        let currentLang = 'es';
+
+        // Detectar idioma automáticamente según el navegador/ubicación del visitante
+        function detectUserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage || 'es';
+            if (browserLang.startsWith('es')) {
+                currentLang = 'es';
+            } else {
+                currentLang = 'en'; // Por defecto inglés para el resto del mundo
+            }
+            document.getElementById('langSwitch').value = currentLang;
+        }
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            renderTop10();
+            renderSectors();
+        }
+
+        const top10Data = [
+            { id: "01", name: "Evolvv IA", desc: "Flujos conversacionales avanzados para empresas estadounidenses.", tag: "Socio verificado" },
+            { id: "02", name: "Flowstate Healthcare AI", desc: "Clasificación médica y programación de citas por voz.", tag: "Socio verificado" },
+            { id: "03", name: "AutomateX360", desc: "Vapi & Retell son expertos en servicios a domicilio.", tag: "Socio verificado" },
+            { id: "04", name: "LegalVoice América", desc: "Automatización de la recepción para bufetes de abogados.", tag: "Socio verificado" },
+            { id: "05", name: "VoiceMetrics Global", desc: "Analítica conversacional en tiempo real para centros de llamadas.", tag: "Socio verificado" },
+            { id: "06", name: "ApexVoice Systems", desc: "Despliegue multinacional de agentes de voz en español e inglés.", tag: "Socio verificado" },
+            { id: "07", name: "InmoVoice AI", desc: "Cualificación automática de leads inmobiliarios 24/7.", tag: "Socio verificado" },
+            { id: "08", name: "FinVoice Pro", desc: "Automatización de atención al cliente bancario y de seguros.", tag: "Socio verificado" },
+            { id: "09", name: "RetailVoice 360", desc: "Gestión de pedidos y soporte logístico mediante voz inteligente.", tag: "Socio verificado" },
+            { id: "10", name: "NexusVoice Labs", desc: "Desarrollo de modelos vocales personalizados y latencia ultrabaja.", tag: "Socio verificado" }
+        ];
+
+        function renderTop10() {
+            const grid = document.getElementById('top10Grid');
+            grid.innerHTML = top10Data.map(item => `
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-indigo-500/50 transition">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-indigo-400">#${item.id} DESTACADO</span>
+                        <span class="text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">✔ ${item.tag}</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">${item.name}</h3>
+                    <p class="text-xs text-slate-400">${item.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        const sectorsData = [
+            {
+                id: "salud",
+                name: { es: "Salud y Bienestar", en: "Health & Wellness" },
+                desc: { es: "Automatización por voz, admisión de pacientes y programación de citas en clínica.", en: "Voice automation, patient intake, and clinic appointment scheduling." },
+                agencies: [
+                    { name: "Flowstate Healthcare AI", desc: "Sistemas avanzados de triaje automatizado." },
+                    { name: "MediVoice EE. UU.", desc: "GoHighLevel integró agentes de voz para reservas." },
+                    { name: "IA para el cuidado dental", desc: "Reducción de inasistencias dentales." },
+                    { name: "Voz Estética", desc: "Automatización de la recepción del spa médico." },
+                    { name: "Soluciones CareCall", desc: "Triaje de la regional de salud." }
+                ]
+            },
+            {
+                id: "hogar",
+                name: { es: "Servicios del Hogar", en: "Home Services" },
+                desc: { es: "Despacho de emergencias, cualificación de clientes y programación de contratistas.", en: "Emergency dispatch, lead qualification, and contractor scheduling." },
+                agencies: [
+                    { name: "AutomateX360", desc: "Expertos en servicios a domicilio y emergencias." },
+                    { name: "PlumbingVoice Pro", desc: "Despacho inmediato de fontaneros 24/7." },
+                    { name: "Roofing AI Call", desc: "Cualificación de presupuestos de tejados." }
+                ]
+            },
+            {
+                id: "legal",
+                name: { es: "Legal y Jurídico", en: "Legal & Law" },
+                desc: { es: "Recepción de solicitudes y filtrado confidencial de clientes para despachos.", en: "Intake reception and confidential client screening for law firms." },
+                agencies: [
+                    { name: "LegalVoice América", desc: "Recepción automatizada para bufetes." },
+                    { name: "JurisVoice AI", desc: "Gestión de citas previas y urgencias legales." }
+                ]
+            },
+            {
+                id: "inmo",
+                name: { es: "Inmobiliario y Proptech", en: "Real Estate" },
+                desc: { es: "Cualificación de compradores y agendamiento de visitas a propiedades.", en: "Buyer qualification and property tour scheduling." },
+                agencies: [
+                    { name: "Proptech Voice Lead", desc: "Filtro automatizado de inquilinos y compradores." },
+                    { name: "InmoBot Global", desc: "Agentes multilingües para el mercado inmobiliario." }
+                ]
+            }
+        ];
+
+        let activeSectorId = 'salud';
+
+        function renderSectors() {
+            const tabsContainer = document.getElementById('sectorTabs');
+            tabsContainer.innerHTML = sectorsData.map(sec => `
+                <button onclick="setActiveSector('${sec.id}')" class="px-4 py-2 text-xs font-semibold rounded-xl transition border ${activeSectorId === sec.id ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/30' : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'}">
+                    ${sec.name[currentLang]}
+                </button>
+            `).join('');
+
+            const sector = sectorsData.find(s => s.id === activeSectorId) || sectorsData[0];
+            const contentContainer = document.getElementById('sectorContentContainer');
+            
+            contentContainer.innerHTML = `
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-white mb-2">${sector.name[currentLang]}</h3>
+                    <p class="text-sm text-slate-400">${sector.desc[currentLang]}</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    ${sector.agencies.map(ag => `
+                        <div class="bg-slate-950/60 border border-slate-800 p-4 rounded-xl">
+                            <h4 class="text-sm font-bold text-slate-200 mb-1">${ag.name}</h4>
+                            <p class="text-xs text-slate-400">${ag.desc}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function setActiveSector(id) {
+            activeSectorId = id;
+            renderSectors();
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert(currentLang === 'es' ? '¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.' : 'Application submitted successfully! We will contact you soon.');
+            e.target.reset();
+        }
+
+        // Inicializar al cargar: detecta idioma, aplica traducciones y renderiza
+        window.addEventListener('DOMContentLoaded', () => {
+            detectUserLanguage();
+            switchLanguage(currentLang);
+        });
+    </script>
 </body>
 </html>
