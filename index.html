@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceStack B2B Global Directory</title>
+    <title>VoiceStack | Automatización de Voz y Asistentes IA para Autónomos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,119 +20,106 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-    <!-- BARRA DE NAVEGACIÓN -->
-    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <!-- BARRA DE NAVEGACIÓN LIMPIA -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            
+            <!-- Logo y Badge -->
             <div class="flex items-center space-x-3">
-                <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">VoiceStack</span>
-                <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20" data-i18n="badge_global">B2B Global</span>
+                <span class="text-lg sm:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">VoiceStack</span>
+                <span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20" data-i18n="badge_solo">Solo Autónomos</span>
             </div>
             
+            <!-- Navegación Escritorio -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
-                <a href="#top10" class="hover:text-white transition" data-i18n="nav_top10">Top 10 Mejores</a>
-                <a href="#sectors" class="hover:text-white transition" data-i18n="nav_sectors">Sectores</a>
-                <a href="#contact" class="hover:text-white transition" data-i18n="nav_contact">Contacto Agencias</a>
+                <a href="#top10" class="hover:text-white transition" data-i18n="nav_top10">Top Soluciones</a>
+                <a href="#sectors" class="hover:text-white transition" data-i18n="nav_sectors">Casos de Uso</a>
+                <a href="#contact" class="hover:text-white transition" data-i18n="nav_access">Acceso Exclusivo</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
-                <!-- Selector Manual de Idioma -->
+            <!-- Controles Derecha -->
+            <div class="flex items-center space-x-3">
                 <select id="langSwitch" onchange="switchLanguage(this.value)" class="bg-slate-800 border border-slate-700 text-xs rounded-lg px-2 py-1 text-slate-300 focus:outline-none focus:border-indigo-500">
                     <option value="es">🇪🇸 ES</option>
                     <option value="en">🇬🇧 EN</option>
                 </select>
 
-                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition shadow-lg shadow-indigo-500/20" data-i18n="nav_claim">
-                    Reclamar el foco
+                <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition shadow-lg shadow-indigo-500/20" data-i18n="nav_cta">
+                    Empezar
                 </a>
+
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#top10" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-white" data-i18n="nav_top10">Top Soluciones</a>
+            <a href="#sectors" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-white" data-i18n="nav_sectors">Casos de Uso</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-white" data-i18n="nav_access">Acceso Exclusivo</a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="py-16 px-4 text-center max-w-4xl mx-auto">
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6" data-i18n="hero_title">
-            Principales socios en IA conversacional y voz
+    <!-- HERO SECTION ENFOCADA A AUTÓNOMOS -->
+    <section class="py-12 sm:py-20 px-4 text-center max-w-4xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-tight" data-i18n="hero_title">
+            Automatiza las llamadas de tu negocio tú mismo con asistentes de voz inteligentes
         </h1>
-        <p class="text-base sm:text-lg text-slate-400 mb-8" data-i18n="hero_desc">
-            Directorio especializado que conecta a empresas con desarrolladores de automatización de voz de élite, expertos en Vapi y agencias B2B especializadas en todo el mundo.
+        <p class="text-sm sm:text-lg text-slate-400 mb-8 max-w-2xl mx-auto" data-i18n="hero_desc">
+            La guía y recursos definitivos para profesionales independientes. Configura recepcionistas virtuales en minutos sin depender de agencias ni conocimientos técnicos avanzados.
         </p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#sectors" class="px-6 py-3 text-sm font-medium bg-slate-900 border border-slate-800 hover:bg-slate-800 rounded-xl transition text-slate-200" data-i18n="hero_btn_sectors">
-                Explorar sectores (50+ agencias)
+        <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <a href="#top10" class="px-6 py-3 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition shadow-lg shadow-indigo-600/30" data-i18n="hero_btn_primary">
+                Ver soluciones probadas
             </a>
-            <a href="#top10" class="px-6 py-3 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition shadow-lg shadow-indigo-600/30" data-i18n="hero_btn_top10">
-                Ver los 10 mejores destacados
+            <a href="#sectors" class="px-6 py-3 text-sm font-medium bg-slate-900 border border-slate-800 hover:bg-slate-800 rounded-xl transition text-slate-200" data-i18n="hero_btn_secondary">
+                Explorar por sector
             </a>
         </div>
     </section>
 
-    <!-- SECCIÓN TOP 10 COMPLETO -->
-    <section id="top10" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-900">
-        <div class="flex items-center justify-between mb-8">
+    <!-- SECCIÓN TOP SOLUCIONES -->
+    <section id="top10" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 border-t border-slate-900">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
             <div>
-                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                    <span>⭐</span> <span data-i18n="top10_title">Top 10 Mejores Ejemplos</span>
+                <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                    <span>⚡</span> <span data-i18n="top10_title">Top 10 Implementaciones para Autónomos</span>
                 </h2>
-                <p class="text-sm text-slate-400 mt-1" data-i18n="top10_subtitle">Máxima visibilidad en búsquedas empresariales globales de alta intención.</p>
+                <p class="text-xs sm:text-sm text-slate-400 mt-1" data-i18n="top10_subtitle">Casos de uso reales listos para replicar paso a paso de forma autónoma.</p>
             </div>
-            <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full" data-i18n="top10_badge">10 espacios activos</span>
+            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3 py-1 rounded-full" data-i18n="top10_badge">10 kits disponibles</span>
         </div>
 
-        <!-- Grid Top 10 Completo (1 al 10) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4" id="top10Grid"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="top10Grid"></div>
     </section>
 
-    <!-- SECCIÓN DE SECTORES CON FILTRADO INTERACTIVO -->
-    <section id="sectors" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-900">
-        <div class="mb-8">
-            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <span>📂</span> <span data-i18n="sectors_title">Agencias por Sectores</span>
+    <!-- SECCIÓN DE CASOS DE USO -->
+    <section id="sectors" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 border-t border-slate-900">
+        <div class="mb-6 sm:mb-8">
+            <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                <span>🎯</span> <span data-i18n="sectors_title">Soluciones por Sector y Actividad</span>
             </h2>
-            <p class="text-sm text-slate-400 mt-1" data-i18n="sectors_subtitle">Haz clic en un sector para desplegar y filtrar sus agencias verificadas.</p>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1" data-i18n="sectors_subtitle">Selecciona tu tipo de actividad para ver cómo automatizar la atención telefónica.</p>
         </div>
 
-        <!-- Botones de Pestañas / Sectores -->
-        <div class="flex flex-wrap gap-2 mb-8" id="sectorTabs"></div>
-
-        <!-- Contenedor del Sector Seleccionado -->
-        <div id="sectorContentContainer" class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm"></div>
+        <div class="flex flex-wrap gap-2 mb-6 sm:mb-8" id="sectorTabs"></div>
+        <div id="sectorContentContainer" class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 sm:p-6 backdrop-blur-sm"></div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTO PARA AGENCIAS Y FREELANCERS -->
-    <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-900">
-        <div class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 rounded-2xl p-8 sm:p-12 shadow-2xl">
-            <div class="text-center max-w-xl mx-auto mb-8">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="contact_title">¿Eres agencia o desarrollador experto en voz?</h2>
-                <p class="text-sm text-slate-400" data-i18n="contact_desc">Postula tu perfil para formar parte del directorio global, accede a los espacios destacados de alta conversión o gestiona tu suscripción vía Lemon Squeezy.</p>
-            </div>
+    <!-- SECCIÓN DE ACCESO / SUSCRIPCIÓN -->
+    <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-t border-slate-900">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-12 shadow-2xl text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="contact_title">¿Listo para automatizar las llamadas de tu negocio?</h2>
+            <p class="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto mb-8" data-i18n="contact_desc">Accede al kit completo de guías, plantillas de conversación y flujos de llamadas adaptados para profesionales independientes.</p>
             
-            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_name">Nombre o Agencia</label>
-                        <input type="text" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="Ej. VoiceFlow Solutions">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_email">Correo Electrónico</label>
-                        <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="contacto@agencia.com">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_sector">Sector Principal / Especialidad</label>
-                    <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
-                        <option value="salud" data-i18n="sec_health">Salud y Bienestar</option>
-                        <option value="construccion" data-i18n="sec_construction">Construcción y Gremios</option>
-                        <option value="hosteleria" data-i18n="sec_hospitality">Hostelería y Ocio</option>
-                        <option value="legal" data-i18n="sec_legal">Legal y Jurídico</option>
-                        <option value="inmo" data-i18n="sec_realestate">Inmobiliario y Proptech</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-slate-400 mb-1" data-i18n="form_message">Mensaje o Enlace a tu Web/GitHub</label>
-                    <textarea rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="Cuéntanos sobre tus integraciones de Vapi, Retell o automatizaciones..."></textarea>
-                </div>
+            <form onsubmit="handleContactSubmit(event)" class="max-w-md mx-auto space-y-4">
+                <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="tu@correo.com">
                 <button type="submit" class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm rounded-xl transition shadow-lg shadow-indigo-600/30" data-i18n="form_submit">
-                    Enviar Solicitud de Ingreso
+                    Obtener Acceso Inmediato
                 </button>
             </form>
         </div>
@@ -140,80 +127,56 @@
 
     <!-- FOOTER -->
     <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
-        <p>&copy; 2026 VoiceStack B2B Global Directory. Todos los derechos reservados.</p>
+        <p>&copy; 2026 VoiceStack. Soluciones de voz autónomas para profesionales.</p>
     </footer>
 
-    <!-- SCRIPT DE DETECCIÓN Y DATOS COMPLETOS -->
+    <!-- SCRIPT -->
     <script>
         const translations = {
             es: {
-                badge_global: "B2B Global",
-                nav_top10: "Top 10 Mejores",
-                nav_sectors: "Sectores",
-                nav_contact: "Contacto Agencias",
-                nav_claim: "Reclamar el foco",
-                hero_title: "Principales socios en IA conversacional y voz",
-                hero_desc: "Directorio especializado que conecta a empresas con desarrolladores de automatización de voz de élite, expertos en Vapi y agencias B2B especializadas en todo el mundo.",
-                hero_btn_sectors: "Explorar sectores (50+ agencias)",
-                hero_btn_top10: "Ver los 10 mejores destacados",
-                top10_title: "Top 10 Mejores Ejemplos",
-                top10_subtitle: "Máxima visibilidad en búsquedas empresariales globales de alta intención.",
-                top10_badge: "10 espacios activos",
-                sectors_title: "Agencias por Sectores",
-                sectors_subtitle: "Haz clic en un sector para desplegar y filtrar sus agencias verificadas.",
-                contact_title: "¿Eres agencia o desarrollador experto en voz?",
-                contact_desc: "Postula tu perfil para formar parte del directorio global, accede a los espacios destacados de alta conversión o gestiona tu suscripción vía Lemon Squeezy.",
-                form_name: "Nombre o Agencia",
-                form_email: "Correo Electrónico",
-                form_sector: "Sector Principal / Especialidad",
-                form_message: "Mensaje o Enlace a tu Web/GitHub",
-                form_submit: "Enviar Solicitud de Ingreso",
-                sec_health: "Salud y Bienestar",
-                sec_construction: "Construcción y Gremios",
-                sec_hospitality: "Hostelería y Ocio",
-                sec_legal: "Legal y Jurídico",
-                sec_realestate: "Inmobiliario y Proptech"
+                badge_solo: "Solo Autónomos",
+                nav_top10: "Top Soluciones",
+                nav_sectors: "Casos de Uso",
+                nav_access: "Acceso Exclusivo",
+                nav_cta: "Empezar",
+                hero_title: "Automatiza las llamadas de tu negocio tú mismo con asistentes de voz inteligentes",
+                hero_desc: "La guía y recursos definitivos para profesionales independientes. Configura recepcionistas virtuales en minutos sin depender de agencias ni conocimientos técnicos avanzados.",
+                hero_btn_primary: "Ver soluciones probadas",
+                hero_btn_secondary: "Explorar por sector",
+                top10_title: "Top 10 Implementaciones para Autónomos",
+                top10_subtitle: "Casos de uso reales listos para replicar paso a paso de forma autónoma.",
+                top10_badge: "10 kits disponibles",
+                sectors_title: "Soluciones por Sector y Actividad",
+                sectors_subtitle: "Selecciona tu tipo de actividad para ver cómo automatizar la atención telefónica.",
+                contact_title: "¿Listo para automatizar las llamadas de tu negocio?",
+                contact_desc: "Accede al kit completo de guías, plantillas de conversación y flujos de llamadas adaptados para profesionales independientes.",
+                form_submit: "Obtener Acceso Inmediato"
             },
             en: {
-                badge_global: "B2B Global",
-                nav_top10: "Top 10 Best",
-                nav_sectors: "Sectors",
-                nav_contact: "Agency Contact",
-                nav_claim: "Claim Spotlight",
-                hero_title: "Leading Partners in Conversational AI & Voice",
-                hero_desc: "Specialized directory connecting companies with elite voice automation developers, Vapi experts, and specialized B2B agencies worldwide.",
-                hero_btn_sectors: "Explore Sectors (50+ agencies)",
-                hero_btn_top10: "View Top 10 Spotlight",
-                top10_title: "Top 10 Best Examples",
-                top10_subtitle: "Maximum visibility in high-intent global business searches.",
-                top10_badge: "10 active slots",
-                sectors_title: "Agencies by Sector",
-                sectors_subtitle: "Click a sector to expand and filter its verified agencies.",
-                contact_title: "Are you a voice agency or expert developer?",
-                contact_desc: "Apply to join the global directory, access high-conversion featured slots, or manage your subscription via Lemon Squeezy.",
-                form_name: "Name or Agency",
-                form_email: "Email Address",
-                form_sector: "Main Sector / Specialty",
-                form_message: "Message or Web/GitHub Link",
-                form_submit: "Submit Application",
-                sec_health: "Health & Wellness",
-                sec_construction: "Construction & Trades",
-                sec_hospitality: "Hospitality & Leisure",
-                sec_legal: "Legal & Law",
-                sec_realestate: "Real Estate & Proptech"
+                badge_solo: "Solopreneurs Only",
+                nav_top10: "Top Solutions",
+                nav_sectors: "Use Cases",
+                nav_access: "Exclusive Access",
+                nav_cta: "Start",
+                hero_title: "Automate Your Business Calls Yourself with Smart Voice Assistants",
+                hero_desc: "The ultimate guide and resources for independent professionals. Set up virtual receptionists in minutes without expensive agencies.",
+                hero_btn_primary: "View Proven Solutions",
+                hero_btn_secondary: "Explore by Sector",
+                top10_title: "Top 10 Implementations for Solopreneurs",
+                top10_subtitle: "Real use cases ready to replicate step-by-step on your own.",
+                top10_badge: "10 kits available",
+                sectors_title: "Solutions by Sector & Activity",
+                sectors_subtitle: "Select your business type to see how to automate phone support.",
+                contact_title: "Ready to automate your business calls?",
+                contact_desc: "Get full access to guides, conversation templates, and call flows tailored for independent professionals.",
+                form_submit: "Get Instant Access"
             }
         };
 
         let currentLang = 'es';
 
-        function detectUserLanguage() {
-            const browserLang = navigator.language || navigator.userLanguage || 'es';
-            if (browserLang.startsWith('es')) {
-                currentLang = 'es';
-            } else {
-                currentLang = 'en';
-            }
-            document.getElementById('langSwitch').value = currentLang;
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
         }
 
         function switchLanguage(lang) {
@@ -229,27 +192,26 @@
         }
 
         const top10Data = [
-            { id: "01", name: "Evolvv IA", desc: "Flujos conversacionales avanzados para empresas estadounidenses.", tag: "Socio verificado" },
-            { id: "02", name: "Flowstate Healthcare AI", desc: "Clasificación médica y programación de citas por voz.", tag: "Socio verificado" },
-            { id: "03", name: "AutomateX360", desc: "Vapi & Retell son expertos en servicios a domicilio y gremios.", tag: "Socio verificado" },
-            { id: "04", name: "LegalVoice América", desc: "Automatización de la recepción para bufetes de abogados.", tag: "Socio verificado" },
-            { id: "05", name: "VoiceMetrics Global", desc: "Analítica conversacional en tiempo real para centros de llamadas.", tag: "Socio verificado" },
-            { id: "06", name: "ApexVoice Systems", desc: "Despliegue multinacional de agentes de voz en español e inglés.", tag: "Socio verificado" },
-            { id: "07", name: "InmoVoice AI", desc: "Cualificación automática de leads inmobiliarios 24/7.", tag: "Socio verificado" },
-            { id: "08", name: "FinVoice Pro", desc: "Automatización de atención al cliente bancario y de seguros.", tag: "Socio verificado" },
-            { id: "09", name: "HospitalityVoice 360", desc: "Reservas automatizadas para hoteles y restaurantes.", tag: "Socio verificado" },
-            { id: "10", name: "NexusVoice Labs", desc: "Desarrollo de modelos vocales personalizados y latencia ultrabaja.", tag: "Socio verificado" }
+            { id: "01", name: "Recepcionista 24/7 para Autónomos", desc: "Desvía tus llamadas fuera de horario y cualifica clientes automáticamente.", tag: "Kit Listo" },
+            { id: "02", name: "Triaje y Citas para Clínicas", desc: "Asistente de voz conectado a calendario para agendar pacientes sin fricción.", tag: "Kit Listo" },
+            { id: "03", name: "Urgencias y Gremios", desc: "Filtra llamadas críticas de urgencia y descarta llamadas comerciales.", tag: "Kit Listo" },
+            { id: "04", name: "Captación Inmobiliaria Local", desc: "Cualificación telefónica automática para propietarios e inquilinos.", tag: "Kit Listo" },
+            { id: "05", name: "Reservas para Hostelería", desc: "Gestión de mesas y pedidos por voz sin depender de terceras plataformas.", tag: "Kit Listo" },
+            { id: "06", name: "Filtro de Clientes para Asesorías", desc: "Recoge datos previos antes de agendar una consulta de pago.", tag: "Kit Listo" },
+            { id: "07", name: "Recordatorios de Citas por Voz", desc: "Reduce ausencias llamando de forma automatizada a tus clientes.", tag: "Kit Listo" },
+            { id: "08", name: "Soporte Técnico Nivel 1", desc: "Resuelve preguntas frecuentes de tus clientes actuales de forma instantánea.", tag: "Kit Listo" },
+            { id: "09", name: "Encuestas de Satisfacción", desc: "Llamadas cortas automatizadas para valorar trabajos realizados.", tag: "Kit Listo" },
+            { id: "10", name: "Clon Telefónico Personalizado", desc: "Configura tu propio asistente para automatizar tu comunicación diaria.", tag: "Kit Listo" }
         ];
 
         function renderTop10() {
-            const grid = document.getElementById('top10Grid');
-            grid.innerHTML = top10Data.map(item => `
-                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-indigo-500/50 transition">
+            document.getElementById('top10Grid').innerHTML = top10Data.map(item => `
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4 sm:p-5 hover:border-indigo-500/50 transition">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="text-xs font-bold text-indigo-400">#${item.id} DESTACADO</span>
-                        <span class="text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">✔ ${item.tag}</span>
+                        <span class="text-xs font-bold text-indigo-400">#${item.id} KIT RECOMENDADO</span>
+                        <span class="text-xs text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">✔ ${item.tag}</span>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-1">${item.name}</h3>
+                    <h3 class="text-base sm:text-lg font-bold text-white mb-1">${item.name}</h3>
                     <p class="text-xs text-slate-400">${item.desc}</p>
                 </div>
             `).join('');
@@ -257,80 +219,54 @@
 
         const sectorsData = [
             {
-                id: "salud",
-                name: { es: "Salud y Bienestar", en: "Health & Wellness" },
-                desc: { es: "Automatización por voz, admisión de pacientes y programación de citas en clínica.", en: "Voice automation, patient intake, and clinic appointment scheduling." },
-                agencies: [
-                    { name: "Flowstate Healthcare AI", desc: "Sistemas avanzados de triaje automatizado." },
-                    { name: "MediVoice EE. UU.", desc: "GoHighLevel integró agentes de voz para reservas." },
-                    { name: "IA para el cuidado dental", desc: "Reducción de inasistencias dentales." },
-                    { name: "Voz Estética", desc: "Automatización de la recepción del spa médico." }
+                id: "trades",
+                name: { es: "Fontanería y Gremios", en: "Plumbing & Trades" },
+                desc: { es: "Atiende llamadas mientras estás trabajando y prioriza urgencias reales.", en: "Handle calls while on site and prioritize real emergencies." },
+                items: [
+                    { name: "Filtro de Urgencias 24/7", desc: "Despacho inmediato de llamadas críticas para autónomos." },
+                    { name: "Cualificación de Reformas", desc: "Recopila detalles y presupuesto antes de visitar al cliente." }
                 ]
             },
             {
-                id: "construccion",
-                name: { es: "Construcción y Gremios", en: "Construction & Trades" },
-                desc: { es: "Recepción de llamadas de urgencia, cualificación de obras y gestión de presupuestos de autónomos y constructoras.", en: "Emergency call handling, project qualification, and contractor budgeting." },
-                agencies: [
-                    { name: "AutomateX360", desc: "Expertos en servicios a domicilio y contratistas." },
-                    { name: "PlumbingVoice Pro", desc: "Despacho inmediato de fontaneros y gremios 24/7." },
-                    { name: "Roofing AI Call", desc: "Cualificación de presupuestos de reformas y tejados." },
-                    { name: "BuildVoice Solutions", desc: "Gestión de incidencias y parte de obra por voz." }
-                ]
-            },
-            {
-                id: "hosteleria",
-                name: { es: "Hostelería y Ocio", en: "Hospitality & Leisure" },
-                desc: { es: "Gestión automatizada de reservas de mesas, pedidos para llevar y atención al cliente en hoteles y restaurantes.", en: "Automated table reservations, takeout orders, and customer support for hotels and restaurants." },
-                agencies: [
-                    { name: "HospitalityVoice 360", desc: "Asistentes de voz para reservas hoteleras y check-in." },
-                    { name: "RestoBot AI", desc: "Recepción telefónica y gestión de pedidos de comida." },
-                    { name: "NightlifeVoice Pro", desc: "Control de aforos y listas VIP automatizadas por voz." }
+                id: "health",
+                name: { es: "Clínicas y Salud", en: "Clinics & Wellness" },
+                desc: { es: "Automatiza la agenda de tu consulta o clínica unipersonal.", en: "Automate booking for single-practitioner clinics." },
+                items: [
+                    { name: "Asistente de Citas Médicas", desc: "Sincronización directa con tu calendario de reservas." },
+                    { name: "Control de Inasistencias", desc: "Confirmación telefónica previa automatizada." }
                 ]
             },
             {
                 id: "legal",
-                name: { es: "Legal y Jurídico", en: "Legal & Law" },
-                desc: { es: "Recepción de solicitudes y filtrado confidencial de clientes para despachos.", en: "Intake reception and confidential client screening for law firms." },
-                agencies: [
-                    { name: "LegalVoice América", desc: "Recepción automatizada para bufetes." },
-                    { name: "JurisVoice AI", desc: "Gestión de citas previas y urgencias legales." }
-                ]
-            },
-            {
-                id: "inmo",
-                name: { es: "Inmobiliario y Proptech", en: "Real Estate" },
-                desc: { es: "Cualificación de compradores y agendamiento de visitas a propiedades.", en: "Buyer qualification and property tour scheduling." },
-                agencies: [
-                    { name: "Proptech Voice Lead", desc: "Filtro automatizado de inquilinos y compradores." },
-                    { name: "InmoBot Global", desc: "Agentes multilingües para el mercado inmobiliario." }
+                name: { es: "Abogados y Asesorías", en: "Law & Advisory" },
+                desc: { es: "Filtra nuevos clientes y evita llamadas comerciales molestas.", en: "Filter new clients and avoid spam calls." },
+                items: [
+                    { name: "Recepción de Casos", desc: "Cuestionario previo de admisión para nuevos clientes." },
+                    { name: "Derivación a Cita Previa", desc: "Gestión autónoma de tu disponibilidad horaria." }
                 ]
             }
         ];
 
-        let activeSectorId = 'salud';
+        let activeSectorId = 'trades';
 
         function renderSectors() {
-            const tabsContainer = document.getElementById('sectorTabs');
-            tabsContainer.innerHTML = sectorsData.map(sec => `
-                <button onclick="setActiveSector('${sec.id}')" class="px-4 py-2 text-xs font-semibold rounded-xl transition border ${activeSectorId === sec.id ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/30' : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'}">
+            document.getElementById('sectorTabs').innerHTML = sectorsData.map(sec => `
+                <button onclick="setActiveSector('${sec.id}')" class="px-3 sm:px-4 py-2 text-xs font-semibold rounded-xl transition border text-center ${activeSectorId === sec.id ? 'bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/30' : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'}">
                     ${sec.name[currentLang]}
                 </button>
             `).join('');
 
             const sector = sectorsData.find(s => s.id === activeSectorId) || sectorsData[0];
-            const contentContainer = document.getElementById('sectorContentContainer');
-            
-            contentContainer.innerHTML = `
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold text-white mb-2">${sector.name[currentLang]}</h3>
-                    <p class="text-sm text-slate-400">${sector.desc[currentLang]}</p>
+            document.getElementById('sectorContentContainer').innerHTML = `
+                <div class="mb-4 sm:mb-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-1">${sector.name[currentLang]}</h3>
+                    <p class="text-xs sm:text-sm text-slate-400">${sector.desc[currentLang]}</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    ${sector.agencies.map(ag => `
-                        <div class="bg-slate-950/60 border border-slate-800 p-4 rounded-xl">
-                            <h4 class="text-sm font-bold text-slate-200 mb-1">${ag.name}</h4>
-                            <p class="text-xs text-slate-400">${ag.desc}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    ${sector.items.map(it => `
+                        <div class="bg-slate-950/60 border border-slate-800 p-3 sm:p-4 rounded-xl">
+                            <h4 class="text-xs sm:text-sm font-bold text-slate-200 mb-1">${it.name}</h4>
+                            <p class="text-[11px] sm:text-xs text-slate-400">${it.desc}</p>
                         </div>
                     `).join('')}
                 </div>
@@ -344,13 +280,12 @@
 
         function handleContactSubmit(e) {
             e.preventDefault();
-            alert(currentLang === 'es' ? '¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.' : 'Application submitted successfully! We will contact you soon.');
+            alert(currentLang === 'es' ? '¡Gracias! Te hemos enviado el acceso a los recursos.' : 'Thank you! Access to resources has been sent.');
             e.target.reset();
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            detectUserLanguage();
-            switchLanguage(currentLang);
+            switchLanguage('es');
         });
     </script>
 </body>
