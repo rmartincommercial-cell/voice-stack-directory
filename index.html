@@ -3,69 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directorio de Agentes de Voz IA para Gremios y Profesionales</title>
-    <meta name="description" content="Encuentra desarrolladores y agencias de agentes de voz IA especializados en fontaneros, electricistas, reparadores de tejados, abogados y más.">
+    <title>Directorio Global de Agentes de Voz IA por Sector</title>
+    <meta name="description" content="Encuentra el agente de voz ideal para tu negocio. Selecciona tu sector: Salud, Construcción, Profesionales Liberales, Hostelería y más.">
     <link rel="canonical" href="https://voice-stack-directory.vercel.app">
     <meta name="robots" content="index, follow">
     
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-slate-50 via-indigo-50/30 to-blue-50/40 text-slate-800 antialiased min-h-screen flex flex-col">
 
     <!-- Header / Hero Section -->
-    <header class="bg-white border-b border-slate-200 py-12 px-4 sm:px-6 lg:px-8 text-center">
+    <header class="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-800 text-white py-16 px-4 sm:px-6 lg:px-8 text-center shadow-md">
         <div class="max-w-3xl mx-auto">
-            <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
-                Directorio Gratuito para Profesionales y Gremios
+            <span class="inline-block bg-indigo-500/30 border border-indigo-400/40 text-indigo-200 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-4 backdrop-blur-sm">
+                ✨ Directorio Especializado por Sectores
             </span>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-                Agentes de Voz IA para tu Negocio Local
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
+                ¿A qué sector pertenece tu negocio?
             </h1>
-            <p class="text-lg text-slate-600 mb-8">
-                No vuelvas a perder una llamada urgente. Descubre expertos en automatización de voz para fontaneros, electricistas, abogados y más.
+            <p class="text-lg text-indigo-200 mb-8 max-w-2xl mx-auto">
+                Selecciona tu industria para descubrir soluciones de agentes de voz IA diseñadas específicamente para automatizar tus llamadas y clientes.
             </p>
             
             <!-- Search Bar -->
             <div class="max-w-md mx-auto">
-                <input type="text" id="searchInput" placeholder="Busca por oficio (ej. fontanero, abogado)..." 
-                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm text-sm">
+                <input type="text" id="searchInput" placeholder="O busca directamente tu oficio (ej. dentista, fontanero, restaurante)..." 
+                    class="w-full px-5 py-3.5 rounded-2xl border-0 bg-white/10 backdrop-blur-md text-white placeholder-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-inner text-sm transition-all">
             </div>
         </div>
     </header>
 
-    <!-- Navigation Industry Tabs -->
-    <nav class="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-xs overflow-x-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex space-x-4 py-3 justify-start sm:justify-center">
-            <button onclick="filterIndustry('all')" id="btn-all" class="industry-btn whitespace-nowrap px-4 py-2 font-medium text-sm rounded-lg bg-indigo-600 text-white shadow-xs transition-colors">
-                ✨ Todos los Gremios
-            </button>
-            <button onclick="filterIndustry('plumbers')" id="btn-plumbers" class="industry-btn whitespace-nowrap px-4 py-2 font-medium text-sm rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
-                🔧 Fontaneros
-            </button>
-            <button onclick="filterIndustry('electricians')" id="btn-electricians" class="industry-btn whitespace-nowrap px-4 py-2 font-medium text-sm rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
-                ⚡ Electricistas
-            </button>
-            <button onclick="filterIndustry('roofers')" id="btn-roofers" class="industry-btn whitespace-nowrap px-4 py-2 font-medium text-sm rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
-                🏠 Reparación de Tejados
-            </button>
-            <button onclick="filterIndustry('lawyers')" id="btn-lawyers" class="industry-btn whitespace-nowrap px-4 py-2 font-medium text-sm rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
-                ⚖️ Abogados y Asesorías
-            </button>
-        </div>
-    </nav>
-
     <!-- Main Content Area -->
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div class="mb-6 flex justify-between items-center">
-            <h2 id="section-title" class="text-xl font-bold text-slate-900">Todos los profesionales destacados</h2>
-            <span id="count-providers" class="text-xs font-medium text-slate-500 bg-slate-200 px-2.5 py-1 rounded-full">0 listados</span>
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- SECTOR SELECTION CARDS (Visible by default) -->
+        <div id="sectors-hub">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Selecciona tu sector principal</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Card 1: Salud (Gradient Blue/Indigo) -->
+                <div onclick="selectSector('health')" class="bg-gradient-to-br from-white to-indigo-50/60 rounded-3xl border border-indigo-100 p-6 shadow-sm hover:shadow-xl hover:border-indigo-400 cursor-pointer transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-4 shadow-md shadow-indigo-500/30 group-hover:scale-110 transition-transform">
+                        🏥
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Salud y Bienestar</h3>
+                    <p class="text-slate-600 text-xs mb-5">Clínicas dentales, estética, fisioterapia y médicos.</p>
+                    <span class="text-xs font-semibold text-indigo-700 bg-indigo-100/80 px-3 py-1.5 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition-colors mt-auto">
+                        Ver soluciones &rarr;
+                    </span>
+                </div>
+
+                <!-- Card 2: Construcción y Gremios (Gradient Amber/Orange) -->
+                <div onclick="selectSector('construction')" class="bg-gradient-to-br from-white to-amber-50/60 rounded-3xl border border-amber-100 p-6 shadow-sm hover:shadow-xl hover:border-amber-400 cursor-pointer transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-4 shadow-md shadow-amber-500/30 group-hover:scale-110 transition-transform">
+                        🔨
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Construcción y Gremios</h3>
+                    <p class="text-slate-600 text-xs mb-5">Fontaneros, electricistas, reformas y cerrajeros.</p>
+                    <span class="text-xs font-semibold text-amber-700 bg-amber-100/80 px-3 py-1.5 rounded-xl group-hover:bg-amber-600 group-hover:text-white transition-colors mt-auto">
+                        Ver soluciones &rarr;
+                    </span>
+                </div>
+
+                <!-- Card 3: Profesionales Liberales (Gradient Emerald/Teal) -->
+                <div onclick="selectSector('legal')" class="bg-gradient-to-br from-white to-emerald-50/60 rounded-3xl border border-emerald-100 p-6 shadow-sm hover:shadow-xl hover:border-emerald-400 cursor-pointer transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-4 shadow-md shadow-emerald-500/30 group-hover:scale-110 transition-transform">
+                        ⚖️
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Profesionales Liberales</h3>
+                    <p class="text-slate-600 text-xs mb-5">Abogados, asesorías fiscales, gestorías y consultores.</p>
+                    <span class="text-xs font-semibold text-emerald-700 bg-emerald-100/80 px-3 py-1.5 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors mt-auto">
+                        Ver soluciones &rarr;
+                    </span>
+                </div>
+
+                <!-- Card 4: Hostelería y Restauración (Gradient Rose/Red) -->
+                <div onclick="selectSector('hospitality')" class="bg-gradient-to-br from-white to-rose-50/60 rounded-3xl border border-rose-100 p-6 shadow-sm hover:shadow-xl hover:border-rose-400 cursor-pointer transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-red-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-4 shadow-md shadow-rose-500/30 group-hover:scale-110 transition-transform">
+                        🍽️
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Hostelería y Ocio</h3>
+                    <p class="text-slate-600 text-xs mb-5">Restaurantes, bares, cafeterías, hoteles y alojamientos.</p>
+                    <span class="text-xs font-semibold text-rose-700 bg-rose-100/80 px-3 py-1.5 rounded-xl group-hover:bg-rose-600 group-hover:text-white transition-colors mt-auto">
+                        Ver soluciones &rarr;
+                    </span>
+                </div>
+
+            </div>
         </div>
 
-        <!-- Grid container for providers -->
-        <div id="grid-providers" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Dynamic Content injected via JS -->
+        <!-- FILTERED PROVIDERS VIEW (Hidden initially) -->
+        <div id="providers-view" class="hidden">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 pb-4 border-b border-slate-200 gap-4">
+                <button onclick="goBackToSectors()" class="inline-flex items-center text-sm font-semibold text-indigo-700 hover:text-indigo-900 bg-indigo-100/80 hover:bg-indigo-200 px-4 py-2.5 rounded-xl transition-colors">
+                    &larr; Volver a Sectores
+                </button>
+                <div class="flex items-center gap-3">
+                    <span id="active-sector-title" class="text-xl font-extrabold text-slate-900"></span>
+                    <span id="count-providers" class="text-xs font-bold text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full">0 listados</span>
+                </div>
+            </div>
+
+            <!-- Subcategory filter buttons inside the sector -->
+            <div id="subcat-filter-container" class="flex flex-wrap gap-2.5 mb-8 justify-center">
+                <!-- Subcategory pills injected via JS -->
+            </div>
+
+            <!-- Grid container for providers -->
+            <div id="grid-providers" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamic Content injected via JS -->
+            </div>
         </div>
+
     </main>
 
     <!-- Footer -->
@@ -76,99 +126,221 @@
 
     <!-- JavaScript Data and Interactivity -->
     <script>
-        // Data source focused on local trades and professionals
         const providers = [
+            // --- SALUD Y BIENESTAR ---
             {
-                name: "PlumbVoice Pro",
-                industry: "plumbers",
-                industryLabel: "Fontanería y Urgencias",
-                description: "Agente de voz entrenado para filtrar urgencias de fontanería, tasar averías básicas por teléfono y agendar citas directamente en tu calendario.",
+                name: "DentalVoice AI",
+                sector: "health",
+                sectorLabel: "Salud y Bienestar",
+                subcat: "Clínicas Dentales",
+                subcatLabel: "Dentistas",
+                description: "Agente de voz especializado en confirmación de citas, recordatorios y gestión de urgencias dentales 24/7.",
+                type: "Agencia",
+                website: "#",
+                badgeColor: "bg-blue-100 text-blue-700"
+            },
+            {
+                name: "AestheticCall Pro",
+                sector: "health",
+                sectorLabel: "Salud y Bienestar",
+                subcat: "Estéticas",
+                subcatLabel: "Centros de Estética",
+                description: "Automatización telefónica para agendas de medicina estética, tratamientos corporales y resolución de dudas.",
                 type: "Especialista IA",
                 website: "#",
-                badge: "Destacado"
+                badgeColor: "bg-indigo-100 text-indigo-700"
+            },
+            {
+                name: "WellnessVoice Asistente",
+                sector: "health",
+                sectorLabel: "Salud y Bienestar",
+                subcat: "Masajes y Spa",
+                subcatLabel: "Masajes y Fisioterapia",
+                description: "Gestión de reservas de masajes y circuitos de spa por teléfono con sincronización directa en Google Calendar.",
+                type: "Agencia",
+                website: "#",
+                badgeColor: "bg-purple-100 text-purple-700"
+            },
+
+            // --- CONSTRUCCIÓN Y GREMIOS ---
+            {
+                name: "PlumbVoice Pro",
+                sector: "construction",
+                sectorLabel: "Construcción y Gremios",
+                subcat: "Fontaneros",
+                subcatLabel: "Fontanería",
+                description: "Asistente inteligente para filtrar urgencias de averías, desatascos y presupuestos rápidos mientras estás en faena.",
+                type: "Especialista IA",
+                website: "#",
+                badgeColor: "bg-amber-100 text-amber-800"
             },
             {
                 name: "ElectroCall AI",
-                industry: "electricians",
-                industryLabel: "Instalaciones Eléctricas",
-                description: "Atiende llamadas 24/7 para apagones y cortes de luz, tomando los datos del cliente y enviando alertas inmediatas al móvil del electricista.",
+                sector: "construction",
+                sectorLabel: "Construcción y Gremios",
+                subcat: "Electricistas",
+                subcatLabel: "Electricidad",
+                description: "Atiende llamadas nocturnas por cortes de luz, toma los datos del cliente y avisa al electricista de guardia.",
                 type: "Agencia",
                 website: "#",
-                badge: "Verificado"
+                badgeColor: "bg-orange-100 text-orange-800"
             },
             {
                 name: "RoofGuard Voice",
-                industry: "roofers",
-                industryLabel: "Reparación de Tejados",
-                description: "Sistema automatizado para captar presupuestos de goteras, tejados y humedades, clasificando el trabajo antes de que cojas la furgoneta.",
+                sector: "construction",
+                sectorLabel: "Construcción y Gremios",
+                subcat: "Reparación de Tejados",
+                subcatLabel: "Reparación de Tejados",
+                description: "Clasificación de llamadas para filtrado de goteras, humedades y reformas de cubiertas residenciales.",
                 type: "Especialista IA",
                 website: "#",
-                badge: "Top Ventas"
+                badgeColor: "bg-yellow-100 text-yellow-800"
             },
+
+            // --- PROFESIONALES LIBERALES ---
             {
                 name: "LegalBot Asistente",
-                industry: "lawyers",
-                industryLabel: "Abogados y Despachos",
-                description: "Recepción telefónica profesional para despachos de abogados, filtrando consultas legales rutinarias y agendando primeras visitas.",
+                sector: "legal",
+                sectorLabel: "Profesionales Liberales",
+                subcat: "Abogados",
+                subcatLabel: "Abogados y Despachos",
+                description: "Recepción telefónica formal para despachos de abogados, filtrando casos civiles y agendando primeras consultas.",
                 type: "Agencia",
                 website: "#",
-                badge: "Verificado"
+                badgeColor: "bg-emerald-100 text-emerald-800"
             },
             {
-                name: "FugaFix Voice Solutions",
-                industry: "plumbers",
-                industryLabel: "Fontanería y Urgencias",
-                description: "Desarrollo a medida de asistentes de voz conectados a WhatsApp para enviar presupuestos automáticos a clientes de fontanería.",
+                name: "TaxVoice Asesoría",
+                sector: "legal",
+                sectorLabel: "Profesionales Liberales",
+                subcat: "Asesorías",
+                subcatLabel: "Asesorías Fiscales",
+                description: "Automatización de llamadas para gestorías y asesorías durante campañas de la renta y trimestrales.",
+                type: "Especialista IA",
+                website: "#",
+                badgeColor: "bg-teal-100 text-teal-800"
+            },
+
+            // --- HOSTELERÍA Y OCIO ---
+            {
+                name: "BistroTable AI",
+                sector: "hospitality",
+                sectorLabel: "Hostelería y Ocio",
+                subcat: "Restaurantes",
+                subcatLabel: "Restaurantes",
+                description: "Gestión automatizada de reservas de mesas, confirmaciones por SMS y control de aforo por teléfono.",
                 type: "Agencia",
-                badge: "Especialista"
+                website: "#",
+                badgeColor: "bg-rose-100 text-rose-800"
+            },
+            {
+                name: "HotelVoice Concierge",
+                sector: "hospitality",
+                sectorLabel: "Hostelería y Ocio",
+                subcat: "Hoteles y Alojamientos",
+                subcatLabel: "Hoteles y Alojamientos",
+                description: "Atención a huéspedes 24 horas para resolver dudas sobre el check-in, servicios del hotel y recomendaciones locales.",
+                type: "Especialista IA",
+                website: "#",
+                badgeColor: "bg-red-100 text-red-800"
             }
         ];
 
-        let currentFilter = 'all';
+        let selectedSector = null;
+        let selectedSubcat = 'all';
 
-        function renderProviders(filter = 'all', searchQuery = '') {
-            const grid = document.getElementById('grid-providers');
-            const titleEl = document.getElementById('section-title');
+        const sectorNames = {
+            health: "🏥 Salud y Bienestar",
+            construction: "🔨 Construcción y Gremios",
+            legal: "⚖️ Profesionales Liberales",
+            hospitality: "🍽️ Hostelería y Ocio"
+        };
+
+        const subcategoriesBySector = {
+            health: ['Clínicas Dentales', 'Estéticas', 'Masajes y Spa'],
+            construction: ['Fontaneros', 'Electricistas', 'Reparación de Tejados'],
+            legal: ['Abogados', 'Asesorías'],
+            hospitality: ['Restaurantes', 'Hoteles y Alojamientos']
+        };
+
+        function selectSector(sector) {
+            selectedSector = sector;
+            selectedSubcat = 'all';
+            document.getElementById('sectors-hub').classList.add('hidden');
+            document.getElementById('providers-view').classList.remove('hidden');
+            document.getElementById('active-sector-title').innerText = sectorNames[sector];
             
-            // Filter logic
+            renderSubcatPills();
+            renderProvidersView();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goBackToSectors() {
+            selectedSector = null;
+            selectedSubcat = 'all';
+            document.getElementById('providers-view').classList.add('hidden');
+            document.getElementById('sectors-hub').classList.remove('hidden');
+            document.getElementById('searchInput').value = '';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderSubcatPills() {
+            const container = document.getElementById('subcat-filter-container');
+            const subcats = subcategoriesBySector[selectedSector] || [];
+            
+            container.innerHTML = `
+                <button onclick="filterSubcat('all')" class="px-4 py-2 text-xs font-bold rounded-xl transition-all shadow-xs ${selectedSubcat === 'all' ? 'bg-indigo-600 text-white shadow-indigo-200' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}">
+                    Todos en este sector
+                </button>
+                ` + subcats.map(sub => `
+                <button onclick="filterSubcat('${sub}')" class="px-4 py-2 text-xs font-bold rounded-xl transition-all shadow-xs ${selectedSubcat === sub ? 'bg-indigo-600 text-white shadow-indigo-200' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}">
+                    ${sub}
+                </button>
+            `).join('');
+        }
+
+        function filterSubcat(subcat) {
+            selectedSubcat = subcat;
+            renderSubcatPills();
+            renderProvidersView();
+        }
+
+        function renderProvidersView(searchQuery = '') {
+            const grid = document.getElementById('grid-providers');
+            
             const filtered = providers.filter(p => {
-                const matchesIndustry = (filter === 'all' || p.industry === filter);
-                const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                const matchesSector = (!selectedSector || p.sector === selectedSector);
+                const matchesSubcat = (selectedSubcat === 'all' || p.subcat === selectedSubcat);
+                const matchesSearch = !searchQuery || 
+                                      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                       p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                                      p.industryLabel.toLowerCase().includes(searchQuery.toLowerCase());
-                return matchesIndustry && matchesSearch;
+                                      p.subcatLabel.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesSector && matchesSubcat && matchesSearch;
             });
 
             document.getElementById('count-providers').innerText = `${filtered.length} listados`;
-            
-            if (filter === 'all') {
-                titleEl.innerText = searchQuery ? `Resultados para "${searchQuery}"` : "Todos los profesionales destacados";
-            } else {
-                const activeBtn = document.getElementById(`btn-${filter}`);
-                titleEl.innerText = activeBtn ? `Especialistas en ${activeBtn.innerText.trim().replace(/^[^\w\s]+/, '').trim()}` : "Proveedores filtrados";
-            }
 
             if (filtered.length === 0) {
-                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">No se encontraron profesionales con esos criterios.</div>`;
+                grid.innerHTML = `<div class="col-span-full text-center py-16 text-slate-500 bg-white rounded-2xl border border-slate-200 shadow-sm">No se encontraron soluciones con esos criterios.</div>`;
                 return;
             }
 
             grid.innerHTML = filtered.map(item => `
-                <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+                <div class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:border-indigo-300">
                     <div>
                         <div class="flex justify-between items-start mb-3">
                             <div>
                                 <h3 class="font-bold text-slate-900 text-lg">${item.name}</h3>
-                                <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wide">${item.industryLabel}</span>
+                                <span class="text-xs font-extrabold text-indigo-600 uppercase tracking-wide">${item.subcatLabel}</span>
                             </div>
-                            <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md font-medium">${item.badge}</span>
+                            <span class="text-xs ${item.badgeColor} px-2.5 py-1 rounded-lg font-bold">${item.type}</span>
                         </div>
-                        <p class="text-slate-600 text-sm mb-4">${item.description}</p>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">${item.description}</p>
                     </div>
                     <div>
-                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100">
-                            <span class="text-xs text-slate-400 font-medium">${item.type}</span>
-                            <a href="${item.website}" target="_blank" class="bg-slate-900 hover:bg-indigo-600 text-white text-xs font-medium px-4 py-2 rounded-lg transition-colors">
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-100">
+                            <span class="text-xs text-slate-400 font-medium">Verificado B2B</span>
+                            <a href="${item.website}" target="_blank" class="bg-slate-900 hover:bg-indigo-600 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-sm">
                                 Ver Solución &rarr;
                             </a>
                         </div>
@@ -177,29 +349,21 @@
             `).join('');
         }
 
-        function filterIndustry(industry) {
-            currentFilter = industry;
-            
-            // Update button styles
-            document.querySelectorAll('.industry-btn').forEach(btn => {
-                btn.className = "industry-btn whitespace-nowrap px-4 py-2 font-medium text-sm rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors";
-            });
-            const activeBtn = document.getElementById(`btn-${industry}`);
-            if (activeBtn) {
-                activeBtn.className = "industry-btn whitespace-nowrap px-4 py-2 font-medium text-sm rounded-lg bg-indigo-600 text-white shadow-xs transition-colors";
-            }
-
-            const searchQuery = document.getElementById('searchInput').value;
-            renderProviders(currentFilter, searchQuery);
-        }
-
-        // Search listener
+        // Global search listener
         document.getElementById('searchInput').addEventListener('input', (e) => {
-            renderProviders(currentFilter, e.target.value);
+            const val = e.target.value.trim();
+            if (val.length > 0) {
+                selectedSector = null;
+                selectedSubcat = 'all';
+                document.getElementById('sectors-hub').classList.add('hidden');
+                document.getElementById('providers-view').classList.remove('hidden');
+                document.getElementById('active-sector-title').innerText = `Resultados de búsqueda: "${val}"`;
+                document.getElementById('subcat-filter-container').innerHTML = '';
+                renderProvidersView(val);
+            } else {
+                goBackToSectors();
+            }
         });
-
-        // Initialize on load
-        window.onload = () => renderProviders('all', '');
     </script>
 </body>
 </html>
