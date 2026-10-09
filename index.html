@@ -1,388 +1,121 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceStack | Directorio de Agentes de Voz IA por Sector</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { 500: '#6366f1', 600: '#4f46e5' }
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Verified AI Voice Agencies | High-End B2B Directory</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
-
-    <!-- BARRA DE NAVEGACIÓN -->
-    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <span class="text-lg sm:text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">VoiceStack</span>
-                <span class="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20" data-i18n="badge_b2b">Directorio IA</span>
+                <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-xl shadow-lg shadow-indigo-500/20">V</div>
+                <span class="font-bold text-lg tracking-tight">VoiceAgency<span class="text-indigo-400">.pro</span></span>
             </div>
-            
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
-                <a href="#sectors" class="hover:text-white transition" data-i18n="nav_sectors">Sectores</a>
-                <a href="#solutions" class="hover:text-white transition" data-i18n="nav_solutions">Soluciones</a>
-                <a href="#tools" class="hover:text-white transition" data-i18n="nav_tools">Plataformas</a>
-                <a href="#contact" class="hover:text-white transition" data-i18n="nav_contact">Acceso</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#niches" class="hover:text-white transition">Niches</a>
+                <a href="#benefits" class="hover:text-white transition">For Agencies</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
             </nav>
-
-            <div class="flex items-center space-x-3">
-                <select id="langSwitch" onchange="switchLanguage(this.value)" class="bg-slate-800 border border-slate-700 text-xs rounded-lg px-2 py-1 text-slate-300 focus:outline-none focus:border-indigo-500">
-                    <option value="es">🇪🇸 ES</option>
-                    <option value="en">🇬🇧 EN</option>
-                </select>
-
-                <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition shadow-lg shadow-indigo-500/20" data-i18n="nav_cta">
-                    Empezar
-                </a>
-
-                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+            <div>
+                <a href="#benefits" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition shadow-lg shadow-indigo-600/30">List Your Agency</a>
             </div>
-        </div>
-
-        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
-            <a href="#sectors" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-white" data-i18n="nav_sectors">Sectores</a>
-            <a href="#solutions" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-white" data-i18n="nav_solutions">Soluciones</a>
-            <a href="#tools" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-white" data-i18n="nav_tools">Plataformas</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-white" data-i18n="nav_contact">Acceso</a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="py-12 sm:py-20 px-4 text-center max-w-5xl mx-auto">
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-tight" data-i18n="hero_title">
-            Directorio de Agencias y Agentes de Voz IA por Sector
-        </h1>
-        <p class="text-sm sm:text-lg text-slate-400 mb-8 max-w-3xl mx-auto" data-i18n="hero_desc">
-            Explora las cuadrículas sectoriales, haz clic en tu industria y despliega las agencias especializadas y soluciones de automatización telefónica adaptadas.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-            <a href="#sectors" class="px-6 py-3 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition shadow-lg shadow-indigo-600/30" data-i18n="hero_btn_primary">
-                Ver Cuadrícula de Sectores
-            </a>
-            <a href="#contact" class="px-6 py-3 text-sm font-medium bg-slate-900 border border-slate-800 hover:bg-slate-800 rounded-xl transition text-slate-200" data-i18n="hero_btn_secondary">
-                Obtener Recursos
-            </a>
-        </div>
-    </section>
-
-    <!-- CUADRÍCULAS SECTORIALES CON DESPLEGABLE DE AGENCIAS -->
-    <section id="sectors" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 border-t border-slate-900">
-        <div class="mb-8">
-            <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                <span>🏢</span> <span data-i18n="sec_main_title">Cuadrícula de Sectores e Integradores</span>
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 mt-1" data-i18n="sec_main_subtitle">Haz clic en cualquier sector para desplegar las agencias y soluciones especializadas.</p>
-        </div>
-
-        <!-- Grid de Sectores -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="sectorsGrid"></div>
-
-        <!-- Contenedor del Desplegable Activo -->
-        <div id="sectorDropdownContainer" class="mt-8 bg-slate-900/60 border border-indigo-500/30 rounded-2xl p-6 sm:p-8 backdrop-blur-sm hidden transition-all duration-300"></div>
-    </section>
-
-    <!-- SECCIÓN DE SOLUCIONES Y CASOS PRÁCTICOS -->
-    <section id="solutions" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 border-t border-slate-900">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-            <div>
-                <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                    <span>⚡</span> <span data-i18n="sol_title">Soluciones y Automatizaciones Validadas</span>
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-400 mt-1" data-i18n="sol_subtitle">Estructuras de llamadas y flujos listos para integrar en operaciones comerciales.</p>
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-20 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-8 uppercase tracking-wider">
+                <span>Verified B2B Directory</span>
             </div>
-            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3 py-1 rounded-full" data-i18n="sol_badge">Casos Reales</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="solutionsGrid"></div>
-    </section>
-
-    <!-- SECCIÓN DE HERRAMIENTAS Y PLATAFORMAS -->
-    <section id="tools" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 border-t border-slate-900">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-            <div>
-                <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                    <span>🛠️</span> <span data-i18n="tools_title">Infraestructura y Herramientas del Mercado</span>
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-400 mt-1" data-i18n="tools_subtitle">Las plataformas tecnológicas estándar para construir y alojar agentes de voz.</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Verified AI Voice Agencies for <span class="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">High-End Industries</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Connect with elite conversational AI developers specializing in luxury real estate, private healthcare, and corporate law.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#niches" class="bg-white text-slate-950 font-semibold px-8 py-4 rounded-xl hover:bg-slate-200 transition shadow-xl">Browse Verified Agencies</a>
+                <a href="#benefits" class="bg-slate-900 border border-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl hover:bg-slate-800 transition">Get Listed Today</a>
             </div>
-            <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3 py-1 rounded-full" data-i18n="tools_badge">Stack Tecnológico</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="toolsGrid"></div>
-    </section>
-
-    <!-- CONTACTO / ACCESO -->
-    <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-t border-slate-900">
-        <div class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-12 shadow-2xl text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="contact_title">¿Quieres acceder a los recursos y guías técnicas?</h2>
-            <p class="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto mb-8" data-i18n="contact_desc">Suscríbete para recibir plantillas de prompts, diagramas de flujo y configuraciones listas para usar.</p>
-            
-            <form onsubmit="handleContactSubmit(event)" class="max-w-md mx-auto space-y-4">
-                <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-indigo-500" placeholder="tu@correo.com">
-                <button type="submit" class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm rounded-xl transition shadow-lg shadow-indigo-600/30" data-i18n="form_submit">
-                    Obtener Acceso
-                </button>
-            </form>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
-        <p>&copy; 2026 VoiceStack. Directorio técnico de automatización de voz IA.</p>
+    <!-- Niches Section -->
+    <section id="niches" class="py-20 border-t border-slate-900 bg-slate-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Specialized Voice Architectures</h2>
+                <p class="text-slate-400">Explore vetted providers engineered for strict industry compliance and high-value conversion.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Luxury Real Estate -->
+                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl relative hover:border-indigo-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-3">Real Estate</div>
+                        <h3 class="text-xl font-bold mb-3">Luxury Real Estate</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Automated inbound lead qualification and VIP booking systems for high-ticket property brokers. No missed midnight buyer calls.</p>
+                    </div>
+                    <span class="text-xs font-semibold text-indigo-400 flex items-center">Explore Real Estate Stack &rarr;</span>
+                </div>
+                <!-- Private Healthcare -->
+                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl relative hover:border-indigo-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-3">Healthcare</div>
+                        <h3 class="text-xl font-bold mb-3">Private Healthcare</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Secure, 24/7 virtual medical receptionists and patient triage assistants designed for private clinics with strict data protocols.</p>
+                    </div>
+                    <span class="text-xs font-semibold text-indigo-400 flex items-center">Explore Healthcare Stack &rarr;</span>
+                </div>
+                <!-- Corporate Law -->
+                <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl relative hover:border-indigo-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="text-indigo-400 font-semibold text-xs uppercase tracking-wider mb-3">Legal</div>
+                        <h3 class="text-xl font-bold mb-3">Corporate Law</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Confidential intake screening and automated client scheduling for premier law practices, filtering quality cases seamlessly.</p>
+                    </div>
+                    <span class="text-xs font-semibold text-indigo-400 flex items-center">Explore Legal Stack &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits / For Agencies Section -->
+    <section id="benefits" class="py-20 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Why Top Voice Agencies List With Us</h2>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
+                            <span><strong>High-Intent B2B Traffic:</strong> Direct access to enterprise buyers searching for specialized voice architectures.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
+                            <span><strong>SEO Authority:</strong> Benefit from our domain ranking targeting high-value commercial keywords.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="h-6 w-6 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs mt-0.5">✓</span>
+                            <span><strong>Zero Marketplace Friction:</strong> Simple tiers designed to showcase your case studies and direct routing to your booking link.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center">
+                    <h3 class="text-xl font-bold mb-2">Ready to Scale Your Agency?</h3>
+                    <p class="text-slate-400 text-sm mb-6">Join our verified roster and start receiving qualified inbound enterprise leads.</p>
+                    <div class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-xl text-sm shadow-lg shadow-indigo-600/30 cursor-pointer">Apply For Listing Tier</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 py-12 text-center text-sm text-slate-500">
+        <p>&copy; 2026 VoiceAgency.pro. All rights reserved.</p>
     </footer>
-
-    <!-- SCRIPT -->
-    <script>
-        const translations = {
-            es: {
-                badge_b2b: "Directorio Sectorial",
-                nav_sectors: "Sectores",
-                nav_solutions: "Soluciones",
-                nav_tools: "Plataformas",
-                nav_contact: "Acceso",
-                nav_cta: "Empezar",
-                hero_title: "Directorio de Agencias y Agentes de Voz IA por Sector",
-                hero_desc: "Explora las cuadrículas sectoriales, haz clic en tu industria y despliega las agencias especializadas y soluciones de automatización telefónica adaptadas.",
-                hero_btn_primary: "Ver Cuadrícula de Sectores",
-                hero_btn_secondary: "Obtener Recursos",
-                sec_main_title: "Cuadrícula de Sectores e Integradores",
-                sec_main_subtitle: "Haz clic en cualquier sector para desplegar las agencias y soluciones especializadas.",
-                sol_title: "Soluciones y Automatizaciones Validadas",
-                sol_subtitle: "Estructuras de llamadas y flujos listos para integrar en operaciones comerciales.",
-                sol_badge: "Casos Reales",
-                tools_title: "Infraestructura y Herramientas del Mercado",
-                tools_subtitle: "Las plataformas tecnológicas estándar para construir y alojar agentes de voz.",
-                tools_badge: "Stack Tecnológico",
-                contact_title: "¿Quieres acceder a los recursos y guías técnicas?",
-                contact_desc: "Suscríbete para recibir plantillas de prompts, diagramas de flujo y configuraciones listas para usar.",
-                form_submit: "Obtener Acceso"
-            },
-            en: {
-                badge_b2b: "Sector Directory",
-                nav_sectors: "Sectors",
-                nav_solutions: "Solutions",
-                nav_tools: "Platforms",
-                nav_contact: "Access",
-                nav_cta: "Get Started",
-                hero_title: "AI Voice Agents & Agencies Directory by Sector",
-                hero_desc: "Explore sector grids, click on your industry, and deploy specialized agencies and tailored phone automation solutions.",
-                hero_btn_primary: "View Sector Grid",
-                hero_btn_secondary: "Get Resources",
-                sec_main_title: "Sector & Integrator Grid",
-                sec_main_subtitle: "Click on any sector to dropdown specialized agencies and solutions.",
-                sol_title: "Validated Solutions & Automations",
-                sol_subtitle: "Call structures and flows ready to integrate into business operations.",
-                sol_badge: "Real Cases",
-                tools_title: "Market Infrastructure & Tools",
-                tools_subtitle: "Standard technology platforms to build and host voice agents.",
-                tools_badge: "Tech Stack",
-                contact_title: "Want access to resources and technical guides?",
-                contact_desc: "Subscribe to receive prompt templates, flow diagrams, and ready-to-use configurations.",
-                form_submit: "Get Access"
-            }
-        };
-
-        let currentLang = 'es';
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        }
-
-        function switchLanguage(lang) {
-            currentLang = lang;
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.textContent = translations[lang][key];
-                }
-            });
-            renderSectorsGrid();
-            if (activeSectorId) renderDropdown(activeSectorId);
-            renderSolutions();
-            renderTools();
-        }
-
-        const sectorsData = [
-            {
-                id: "realestate",
-                title: { es: "Inmobiliaria y Proptech", en: "Real Estate & Proptech" },
-                desc: { es: "Cualificación de compradores, gestión de alquileres y visitas.", en: "Buyer qualification, rental management, and property viewings." },
-                agencies: [
-                    { name: "PropVoice Solutions", type: "Agencia Integradora", desc: "Automatización de llamadas para promotoras y agencias inmobiliarias." },
-                    { name: "HabitaCall AI", type: "Software Especializado", desc: "Filtrado de inquilinos y gestión de soporte a propiedades 24/7." }
-                ]
-            },
-            {
-                id: "health",
-                title: { es: "Salud y Clínicas", en: "Healthcare & Clinics" },
-                desc: { es: "Agenda médica, triaje telefónico y control de inasistencias.", en: "Medical booking, phone triage, and no-show reduction." },
-                agencies: [
-                    { name: "MedVoice Integrators", type: "Consultora Médica IA", desc: "Centralitas inteligentes conectadas con software de gestión hospitalaria." },
-                    { name: "ClinicBot Enterprise", type: "Desarrollador de Voz", desc: "Automatización de citas previas y recordatorios por voz." }
-                ]
-            },
-            {
-                id: "trades",
-                title: { es: "Gremios y Oficios", en: "Trades & Services" },
-                desc: { es: "Filtro de urgencias y toma de presupuestos para autónomos y pymes.", en: "Emergency filtering and quoting for contractors and small businesses." },
-                agencies: [
-                    { name: "GremioVoice Tech", type: "Solución para Autónomos", desc: "Desvío de llamadas y detección de incidencias críticas en obras y servicios." },
-                    { name: "ServiCall Pro", type: "Agencia de Automatización", desc: "Toma de datos y fotografías de averías mediante enlaces SMS adjuntos." }
-                ]
-            },
-            {
-                id: "hospitality",
-                title: { es: "Hostelería y Reservas", en: "Hospitality & Dining" },
-                desc: { es: "Gestión de mesas, comandas y pedidos sin interrumpir el servicio.", en: "Table management, orders, and bookings without interruption." },
-                agencies: [
-                    { name: "RestoVoice Hub", type: "Integrador Horeca", desc: "Control de comensales, horarios y restricciones alimentarias por voz." },
-                    { name: "OrderCall IA", type: "SaaS de Pedidos", desc: "Toma de comandas automatizada para cocinas y servicios de entrega." }
-                ]
-            },
-            {
-                id: "legal",
-                title: { es: "Abogados y Asesorías", en: "Law & Advisory" },
-                desc: { es: "Admisión de nuevos clientes y filtrado de llamadas comerciales.", en: "New client onboarding and spam call filtering." },
-                agencies: [
-                    { name: "LexVoice Partners", type: "Consultora Legal Tech", desc: "Cuestionarios de admisión previos y derivación a citas de pago." },
-                    { name: "AsesorCall IA", type: "Agencia de Procesos", desc: "Gestión autónoma de disponibilidad horaria para despachos profesionales." }
-                ]
-            },
-            {
-                id: "ecommerce",
-                title: { es: "E-commerce y Retail", en: "E-commerce & Retail" },
-                desc: { es: "Seguimiento de envíos, devoluciones y soporte postventa.", en: "Shipping tracking, returns, and post-purchase support." },
-                agencies: [
-                    { name: "RetailVoice Global", type: "Integrador Omnicanal", desc: "Atención comercial automatizada y estados de pedidos en tiempo real." },
-                    { name: "ShopBot Solutions", type: "Agencia E-commerce", desc: "Recuperación de carritos y gestión de incidencias de transporte." }
-                ]
-            }
-        ];
-
-        let activeSectorId = null;
-
-        function renderSectorsGrid() {
-            document.getElementById('sectorsGrid').innerHTML = sectorsData.map(sec => `
-                <div onclick="toggleSector('${sec.id}')" class="cursor-pointer bg-slate-900/60 border ${activeSectorId === sec.id ? 'border-indigo-500 shadow-lg shadow-indigo-500/20 bg-slate-900' : 'border-slate-800 hover:border-indigo-500/50'} rounded-xl p-5 transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] font-bold text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded border border-indigo-500/20">Sector Verificado</span>
-                            <span class="text-xs text-slate-400">${activeSectorId === sec.id ? '▲ Ocultar' : '▼ Ver Agencias'}</span>
-                        </div>
-                        <h3 class="text-base sm:text-lg font-bold text-white mb-1">${sec.title[currentLang]}</h3>
-                        <p class="text-xs text-slate-400">${sec.desc[currentLang]}</p>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function toggleSector(id) {
-            if (activeSectorId === id) {
-                activeSectorId = null;
-                document.getElementById('sectorDropdownContainer').classList.add('hidden');
-            } else {
-                activeSectorId = id;
-                renderDropdown(id);
-                document.getElementById('sectorDropdownContainer').classList.remove('hidden');
-            }
-            renderSectorsGrid();
-        }
-
-        function renderDropdown(id) {
-            const sector = sectorsData.find(s => s.id === id);
-            if (!sector) return;
-
-            document.getElementById('sectorDropdownContainer').innerHTML = `
-                <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
-                    <div>
-                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Agencias e Integradores para:</span>
-                        <h3 class="text-lg sm:text-xl font-bold text-white">${sector.title[currentLang]}</h3>
-                    </div>
-                    <button onclick="toggleSector('${id}')" class="text-xs text-slate-400 hover:text-white bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Cerrar ✕</button>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    ${sector.agencies.map(ag => `
-                        <div class="bg-slate-950/80 border border-slate-800 p-4 rounded-xl flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center justify-between mb-1">
-                                    <h4 class="text-sm font-bold text-slate-200">🏢 ${ag.name}</h4>
-                                    <span class="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">${ag.type}</span>
-                                </div>
-                                <p class="text-xs text-slate-400 mb-3">${ag.desc}</p>
-                            </div>
-                            <div class="pt-2 border-t border-slate-900 flex justify-end">
-                                <a href="#contact" class="text-xs text-indigo-400 font-semibold hover:underline">Contactar con agencia →</a>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-
-        const solutionsData = [
-            { category: "Recepción 24/7", title: "Asistente de Guardia y Desvíos", desc: "Gestión automática de llamadas fuera de horario comercial con filtrado de urgencias.", tag: "Operativa" },
-            { category: "Cualificación de Leads", title: "Filtro Telefónico Comercial", desc: "Cuestionario automatizado para validar presupuestos y necesidades antes de agendar.", tag: "Ventas" },
-            { category: "Soporte Nivel 1", title: "Resolución de Preguntas Frecuentes", desc: "Respuestas instantáneas a dudas sobre estados de pedidos, horarios y ubicaciones.", tag: "Atención" }
-        ];
-
-        function renderSolutions() {
-            document.getElementById('solutionsGrid').innerHTML = solutionsData.map(sol => `
-                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-indigo-500/50 transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] font-bold text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded border border-indigo-500/20">${sol.category}</span>
-                            <span class="text-[11px] text-indigo-300">✔ ${sol.tag}</span>
-                        </div>
-                        <h3 class="text-base sm:text-lg font-bold text-white mb-1">${sol.title}</h3>
-                        <p class="text-xs text-slate-400 mb-4">${sol.desc}</p>
-                    </div>
-                    <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                        <span>Configuración guiada</span>
-                        <a href="#contact" class="text-indigo-400 hover:underline font-semibold">Ver Prompt →</a>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        const toolsData = [
-            { name: "Plataformas de Voz Conversacional", desc: "Entornos especializados en baja latencia y gestión de llamadas en tiempo real." },
-            { name: "Conectores y Automatización No-Code", desc: "Herramientas de orquestación para conectar llamadas con bases de datos y CRMs." }
-        ];
-
-        function renderTools() {
-            document.getElementById('toolsGrid').innerHTML = toolsData.map(tool => `
-                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4 sm:p-5">
-                    <h3 class="text-sm sm:text-base font-bold text-white mb-1">⚙️ ${tool.name}</h3>
-                    <p class="text-xs text-slate-400">${tool.desc}</p>
-                </div>
-            `).join('');
-        }
-
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            alert(currentLang === 'es' ? '¡Gracias! Te hemos enviado los recursos técnicos al correo.' : 'Thank you! Technical resources have been sent to your email.');
-            e.target.reset();
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            switchLanguage('es');
-            renderSectorsGrid();
-        });
-    </script>
 </body>
 </html>
