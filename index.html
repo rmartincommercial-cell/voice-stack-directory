@@ -1,29 +1,124 @@
-<div class="pricing-grid">
-  <!-- Plan Pro: 200€/mes -->
-  <div class="slot-card pro-tier">
-    <h3>Pro Agency Listing</h3>
-    <p class="price">€200<span>/month</span></p>
-    <ul class="features">
-      <li>Standard directory placement</li>
-      <li>Direct client lead routing</li>
-      <li>Active badge status</li>
-    </ul>
-    <a href="https://sentinel-rm.lemonsqueezy.com/checkout/buy/ddfa7b23-4d81-4d81-9be9-d553376bafcf" class="cta-button" target="_blank">
-      Claim Pro Slot
-    </a>
-  </div>
+import React from 'react';
 
-  <!-- Plan Exclusivo: 500€/mes -->
-  <div class="slot-card exclusive-tier">
-    <h3>Exclusive Agency Tier</h3>
-    <p class="price">€500<span>/month</span></p>
-    <ul class="features">
-      <li>Top-of-grid maximum visibility</li>
-      <li>Category sponsorship</li>
-      <li>Priority lead routing & exposure</li>
-    </ul>
-    <a href="https://sentinel-rm.lemonsqueezy.com/checkout/buy/2005a54e-0965-43a4-80fa-4dc4b3028a8f" class="cta-button" target="_blank">
-      Secure Exclusive Slot
-    </a>
-  </div>
-</div>
+interface AgencyCardProps {
+  name: string;
+  description: string;
+  logoUrl: string;
+  websiteUrl: string;
+  category: string;
+  isExclusive?: boolean;
+}
+
+export const AgencyCard: React.FC<AgencyCardProps> = ({
+  name,
+  description,
+  logoUrl,
+  websiteUrl,
+  category,
+  isExclusive = false,
+}) => {
+  // Construcción del enlace con parámetros UTM para trazabilidad de leads
+  const utmTargetUrl = `${websiteUrl}?utm_source=voiceagency.pro&utm_medium=directory&utm_campaign=${
+    isExclusive ? 'exclusive_sponsor' : 'pro_member'
+  }`;
+
+  if (isExclusive) {
+    return (
+      <div className="relative w-full mb-8 group">
+        {/* Efecto Glow/Brillo para la tarjeta Exclusiva */}
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+
+        {/* Tarjeta Principal Exclusiva */}
+        <div className="relative w-full bg-slate-900 border-2 border-amber-500/50 rounded-2xl p-5 sm:p-8 shadow-2xl flex flex-col justify-between gap-6">
+          
+          {/* Header de la Tarjeta Exclusiva */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            {/* Badge de Categora / Exclusividad */}
+            <div className="inline-flex items-center gap-1.5 self-start bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="text-sm">⭐</span> Exclusive Category Leader
+            </div>
+            
+            <span className="text-xs text-slate-400 font-mono">
+              Verified Partner • {category}
+            </span>
+          </div>
+
+          {/* Cuerpo: Logo + Info */}
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+            {/* Logo adaptable (móvil: 56px, desktop: 72px) */}
+            <img
+              src={logoUrl}
+              alt={`${name} logo`}
+              className="w-14 h-14 sm:w-18 sm:h-18 rounded-xl object-contain bg-slate-800 p-2 border border-slate-700 shrink-0"
+            />
+
+            <div className="flex-1 space-y-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                {name}
+                <svg className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
+                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                </svg>
+              </h3>
+              
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                {description}
+              </p>
+            </div>
+          </div>
+
+          {/* Footer & Botón de Llamada a la Acción (CTA) */}
+          <div className="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+            <div className="text-xs text-slate-400 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Available for high-scale enterprise deployments</span>
+            </div>
+
+            {/* Botón táctil optimizado para móvil (min-height 48px) */}
+            <a
+              href={utmTargetUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] text-center"
+            >
+              <span>Visit Agency Website</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // Tarjeta Standard Pro (200 €/mes)
+  return (
+    <div className="w-full bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-slate-700 transition flex flex-col justify-between gap-4">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <img src={logoUrl} alt={name} className="w-12 h-12 rounded-lg bg-slate-800 p-2 border border-slate-800 object-contain" />
+          <div>
+            <h4 className="text-lg font-semibold text-white">{name}</h4>
+            <span className="text-xs text-slate-400">{category}</span>
+          </div>
+        </div>
+        <span className="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Pro</span>
+      </div>
+
+      <p className="text-xs sm:text-sm text-slate-400 line-clamp-3">{description}</p>
+
+      <a
+        href={utmTargetUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full inline-flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium py-2.5 px-4 rounded-lg transition border border-slate-700 text-center"
+      >
+        <span>View Profile</span>
+        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  );
+};
