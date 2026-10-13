@@ -1,266 +1,93 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-  <meta charset="UTF-8" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-  <title>VoiceAgency.pro | Verified AI Voice Software & Agency Directory</title> 
-  <!-- Tailwind CSS via CDN --> 
-  <script src="https://cdn.tailwindcss.com"></script> 
-</head> 
-<body class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-900"> 
-  <!-- TOP NAVIGATION --> 
-  <header class="w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50"> 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"> 
-      <div class="flex items-center gap-3"> 
-        <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></div> 
-        <span class="font-extrabold text-lg tracking-wider text-white"> 
-          VoiceAgency<span class="text-cyan-400">.pro</span> 
-        </span> 
-      </div> 
-      <a href="#sectors" class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"> 
-        Claim Your Slot 
-      </a> 
-    </div> 
-  </header> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceAgency.pro - Directorio Exclusivo de Agencias de Voz IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- HERO SECTION --> 
-  <section class="py-16 px-4 text-center max-w-4xl mx-auto"> 
-    <div class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-cyan-300 uppercase rounded-full bg-cyan-950/80 border border-cyan-500/30"> 
-      Exclusive AI Voice Directory (Vapi & ElevenLabs) 
-    </div> 
-    <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight mb-6"> 
-      Connect with Top <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Voice Automation</span> Agencies 
-    </h1> 
-    <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed"> 
-      Strict, industry-limited slot structure to guarantee high visibility, market authority, and direct high-ticket client acquisition. 
-    </p>
-
-    <!-- FAIR-PLAY POLICY BOX -->
-    <div class="max-w-xl mx-auto mb-6 bg-slate-900/90 border border-amber-500/30 rounded-2xl p-5 text-left shadow-xl">
-      <div class="flex items-start gap-3">
-        <span class="text-amber-400 text-lg">⚠️</span>
-        <div class="flex-grow">
-          <h3 class="text-amber-400 font-bold text-xs uppercase tracking-wider mb-1">Fair-Play Policy & Strict Slot Limit</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-3">
-            Each agency is strictly limited to <strong class="text-slate-200">1 slot per sector</strong>. Duplicate purchases within the same sector will be automatically canceled and refunded.
-          </p>
-          <label for="fairPlayCheckbox" class="flex items-center gap-2.5 cursor-pointer pt-2 border-t border-slate-800">
-            <input 
-              type="checkbox" 
-              id="fairPlayCheckbox" 
-              class="h-4 w-4 rounded border-slate-700 bg-slate-950 text-amber-500 focus:ring-amber-500/50 cursor-pointer"
-            >
-            <span class="text-xs text-slate-300">
-              I confirm compliance with the <strong class="text-white">1 slot per sector</strong> limit.
-            </span>
-          </label>
-          <p id="checkboxError" class="text-amber-400 text-[11px] font-medium mt-2 hidden">
-            ⚠️ You must check the confirmation box above before reserving a slot.
-          </p>
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">VoiceAgency.pro</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm text-slate-400">
+                <a href="#features" class="hover:text-white transition">Características</a>
+                <a href="#pricing" class="hover:text-white transition">Planes</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </nav>
         </div>
-      </div>
-    </div>
-  </section> 
+    </header>
 
-  <!-- SECTOR GRIDS --> 
-  <main id="sectors" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-16"> 
-    <!-- SECTOR 1: REAL ESTATE --> 
-    <div class="w-full p-6 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl shadow-2xl"> 
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-800"> 
-        <div> 
-          <span class="inline-block px-3 py-1 text-xs font-bold tracking-wider uppercase rounded-full border bg-emerald-950/60 border-emerald-500/40 text-emerald-400 mb-3"> 
-            Luxury Real Estate & Management 
-          </span> 
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight"> 
-            Real Estate & Property Management 
-          </h2> 
-        </div> 
-        <div class="text-xs font-medium text-slate-400 bg-slate-950 px-4 py-2 rounded-xl border border-slate-800"> 
-          Protected Territory Slots 
-        </div> 
-      </div> 
-      <!-- EXCLUSIVE (3 SLOTS - TARJETAS AMPLIADAS) --> 
-      <div class="mb-12"> 
-        <div class="flex items-center gap-2 mb-4"> 
-          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> 
-          <h3 class="text-xs font-bold text-amber-400 uppercase tracking-widest"> 
-            Category Leaders (Exclusive - $500/mo) — Max 3 Agencies 
-          </h3> 
-        </div> 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #1 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #2 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #3 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-        </div> 
-      </div> 
-      <!-- PRO (10 SLOTS) --> 
-      <div> 
-        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4"> 
-          Verified Pro Agencies ($200/mo) — Max 10 Agencies 
-        </h3> 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #1</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #2</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #3</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #4</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #5</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #6</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #7</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #8</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #9</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #10</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-        </div> 
-      </div> 
-    </div> 
+    <!-- Hero Section -->
+    <main class="max-w-6xl mx-auto px-6 py-16 flex-grow">
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                El Directorio B2B Definitivo para <span class="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Agencias de Voz IA</span>
+            </h1>
+            <p class="text-lg text-slate-400">
+                Acceso exclusivo a recursos avanzados, herramientas de automatización conversacional y posicionamiento verificado. 
+            </p>
+        </div>
 
-    <!-- SECTOR 2: HEALTHCARE --> 
-    <div class="w-full p-6 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl shadow-2xl"> 
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-800"> 
-        <div> 
-          <span class="inline-block px-3 py-1 text-xs font-bold tracking-wider uppercase rounded-full border bg-cyan-950/60 border-cyan-500/40 text-cyan-400 mb-3"> 
-            Private Healthcare & Clinics 
-          </span> 
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight"> 
-            Private Healthcare & Aesthetics 
-          </h2> 
-        </div> 
-        <div class="text-xs font-medium text-slate-400 bg-slate-950 px-4 py-2 rounded-xl border border-slate-800"> 
-          Protected Territory Slots 
-        </div> 
-      </div> 
-      <!-- EXCLUSIVE (TARJETAS AMPLIADAS) --> 
-      <div class="mb-12"> 
-        <div class="flex items-center gap-2 mb-4"> 
-          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> 
-          <h3 class="text-xs font-bold text-amber-400 uppercase tracking-widest"> 
-            Category Leaders (Exclusive - $500/mo) — Max 3 Agencies 
-          </h3> 
-        </div> 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #1 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #2 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #3 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-        </div> 
-      </div> 
-      <!-- PRO --> 
-      <div> 
-        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4"> 
-          Verified Pro Agencies ($200/mo) — Max 10 Agencies 
-        </h3> 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #1</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #2</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #3</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #4</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #5</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #6</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #7</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #8</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #9</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #10</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-        </div> 
-      </div> 
-    </div> 
+        <!-- Pricing Grid -->
+        <div id="pricing" class="grid md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
+            
+            <!-- Plan Pro (€200/mo) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between shadow-xl">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Pro Software Directory Pass</h3>
+                    <p class="text-slate-400 text-sm mt-2">Acceso instantáneo a la base de datos curada de recursos y herramientas de IA conversacional.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-white">€200</span>
+                        <span class="text-slate-400 text-sm">/ mes</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/ce096003-b077-47ea-a6ef-6ac79e1ff918" 
+                       target="_blank" 
+                       class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition shadow-lg shadow-blue-600/20">
+                        Comprar Pase Pro (€200/mo)
+                    </a>
+                </div>
+            </div>
 
-    <!-- SECTOR 3: CORPORATE LAW --> 
-    <div class="w-full p-6 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl shadow-2xl"> 
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-800"> 
-        <div> 
-          <span class="inline-block px-3 py-1 text-xs font-bold tracking-wider uppercase rounded-full border bg-purple-950/60 border-purple-500/40 text-purple-400 mb-3"> 
-            Corporate Law & Advisory 
-          </span> 
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight"> 
-            Corporate Law & Advisory 
-          </h2> 
-        </div> 
-        <div class="text-xs font-medium text-slate-400 bg-slate-950 px-4 py-2 rounded-xl border border-slate-800"> 
-          Protected Territory Slots 
-        </div> 
-      </div> 
-      <!-- EXCLUSIVE (TARJETAS AMPLIADAS) --> 
-      <div class="mb-12"> 
-        <div class="flex items-center gap-2 mb-4"> 
-          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> 
-          <h3 class="text-xs font-bold text-amber-400 uppercase tracking-widest"> 
-            Category Leaders (Exclusive - $500/mo) — Max 3 Agencies 
-          </h3> 
-        </div> 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #1 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #2 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/90ba0ac0-bec0-496e-823a-ea462051a261" target="_blank" onclick="return validateCheckout(event)" class="relative min-h-[190px] p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-b from-amber-500/15 via-amber-950/10 to-transparent flex flex-col items-center justify-center gap-4 group hover:border-amber-400 hover:scale-[1.02] transition-all shadow-xl"> 
-            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Slot #3 Available</span> 
-            <span class="px-6 py-3 rounded-xl bg-amber-500/20 border border-amber-500/50 text-amber-200 text-xs font-extrabold group-hover:bg-amber-500 group-hover:text-slate-950 transition-all shadow-lg">Claim Exclusive Slot ($500)</span> 
-          </a> 
-        </div> 
-      </div> 
-      <!-- PRO --> 
-      <div> 
-        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4"> 
-          Verified Pro Agencies ($200/mo) — Max 10 Agencies 
-        </h3> 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #1</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #2</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #3</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #4</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #5</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #6</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #7</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #8</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #9</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-          <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/94f682fd-189e-4c02-9f2f-414238a8a79a" target="_blank" onclick="return validateCheckout(event)" class="min-h-[100px] p-4 rounded-xl border border-slate-800 bg-slate-950/80 flex flex-col items-center justify-center gap-1.5 hover:border-slate-700 group transition-all"><span class="text-[10px] uppercase font-semibold text-slate-600 group-hover:text-slate-400">Slot #10</span><span class="text-xs font-bold text-slate-300 group-hover:text-cyan-400">Reserve</span></a> 
-        </div> 
-      </div> 
-    </div> 
-  </main> 
+            <!-- Plan Exclusive (€500/mo) -->
+            <div class="bg-slate-900 border border-indigo-500/50 rounded-2xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-bl-xl text-white">
+                    Exclusivo
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Exclusive Software Directory Pass</h3>
+                    <p class="text-slate-400 text-sm mt-2">Acceso prémium con prioridad absoluta, soporte dedicado y ranura de sector blindada bajo lógica Fair-Play.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-extrabold text-white">€500</span>
+                        <span class="text-slate-400 text-sm">/ mes</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188" 
+                       target="_blank" 
+                       class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl transition shadow-lg shadow-indigo-600/20">
+                        Comprar Pase Exclusive (€500/mo)
+                    </a>
+                </div>
+            </div>
 
-  <!-- FOOTER --> 
-  <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500"> 
-    © 2026 VoiceAgency.pro — Directory for AI Voice Software & Verified Agencies. All rights reserved. 
-  </footer> 
+        </div>
+    </main>
 
-  <!-- SCRIPT DE VALIDACIÓN FAIR-PLAY -->
-  <script>
-    function validateCheckout(event) {
-      const checkbox = document.getElementById('fairPlayCheckbox');
-      const errorMsg = document.getElementById('checkboxError');
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900/30 py-8 text-center text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 VoiceAgency.pro. Todos los derechos reservados.</p>
+            <p class="text-xs text-slate-400">Pagos seguros gestionados mediante Lemon Squeezy (Merchant of Record).</p>
+        </div>
+    </footer>
 
-      if (!checkbox.checked) {
-        event.preventDefault(); // Evita la redirección si no está marcado
-        errorMsg.classList.remove('hidden');
-        checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        checkbox.focus();
-        return false;
-      }
-
-      errorMsg.classList.add('hidden');
-      return true; // Permite abrir la pasarela en vivo
-    }
-  </script>
-</body> 
+</body>
 </html>
