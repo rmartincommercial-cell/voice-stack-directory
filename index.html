@@ -6,23 +6,23 @@
     <title>VoiceAgency.pro — Exclusive AI Voice Directory</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#05070e] text-slate-100 font-sans antialiased min-h-screen">
+<body class="bg-[#05070e] text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Navbar -->
+    <!-- Header / Navbar -->
     <header class="border-b border-slate-900 bg-[#070a13]/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <span class="inline-block w-2 h-2 rounded-full bg-cyan-400"></span>
                 <span class="text-xl font-bold tracking-tight text-white">VoiceAgency<span class="text-cyan-400">.pro</span></span>
             </div>
-            <button onclick="document.getElementById('sectors').scrollIntoView({behavior: 'smooth'})" class="bg-slate-800 hover:bg-slate-700 text-xs font-semibold px-4 py-2 rounded-md border border-slate-700 text-slate-200 transition">
+            <button onclick="document.getElementById('sectors').scrollIntoView({behavior: 'smooth'})" class="bg-slate-800 hover:bg-slate-700 text-xs font-semibold px-4 py-2 rounded-md border border-slate-700 text-slate-200 transition cursor-pointer">
                 Claim Your Slot
             </button>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
 
         <!-- Hero Title -->
         <div class="text-center max-w-3xl mx-auto mb-10">
@@ -42,7 +42,7 @@
             <div class="flex items-start gap-3 mb-3">
                 <span class="text-amber-400 text-lg">⚠️</span>
                 <div>
-                    <h3 class="text-amber-400 font-bold text-xs uppercase tracking-wider">Fair-Play Policy & Strict Slot Limit</h3>
+                    <h3 class="text-amber-400 font-bold text-xs uppercase tracking-wider">FAIR-PLAY POLICY & STRICT SLOT LIMIT</h3>
                     <p class="text-slate-400 text-xs mt-1">
                         Each agency or legal entity is strictly limited to <strong class="text-slate-200">1 slot per sector</strong> (maximum of 3 sectors total). Duplicate purchases within the same sector will be automatically canceled and refunded.
                     </p>
@@ -95,26 +95,21 @@
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <!-- Slot #1 Available -->
                         <div class="bg-[#12100b] border border-amber-500/40 rounded-xl p-6 text-center flex flex-col justify-between h-44 shadow-lg hover:border-amber-500/80 transition">
                             <span class="text-xs font-bold text-amber-300/80 uppercase">SLOT #1 AVAILABLE</span>
-                            <button onclick="handleCheckout('exclusive')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20">
+                            <button data-checkout="exclusive" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20 cursor-pointer">
                                 Claim Exclusive<br>Slot ($500)
                             </button>
                         </div>
-
-                        <!-- Slot #2 Available -->
                         <div class="bg-[#12100b] border border-amber-500/40 rounded-xl p-6 text-center flex flex-col justify-between h-44 shadow-lg hover:border-amber-500/80 transition">
                             <span class="text-xs font-bold text-amber-300/80 uppercase">SLOT #2 AVAILABLE</span>
-                            <button onclick="handleCheckout('exclusive')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20">
+                            <button data-checkout="exclusive" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20 cursor-pointer">
                                 Claim Exclusive<br>Slot ($500)
                             </button>
                         </div>
-
-                        <!-- Slot #3 Available -->
                         <div class="bg-[#12100b] border border-amber-500/40 rounded-xl p-6 text-center flex flex-col justify-between h-44 shadow-lg hover:border-amber-500/80 transition">
                             <span class="text-xs font-bold text-amber-300/80 uppercase">SLOT #3 AVAILABLE</span>
-                            <button onclick="handleCheckout('exclusive')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20">
+                            <button data-checkout="exclusive" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20 cursor-pointer">
                                 Claim Exclusive<br>Slot ($500)
                             </button>
                         </div>
@@ -128,19 +123,16 @@
                     </h3>
 
                     <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
-                        <!-- Slots #1 to #10 -->
-                        <script>
-                            for(let i = 1; i <= 10; i++) {
-                                document.write(`
-                                    <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition">
-                                        <span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #${i}</span>
-                                        <button onclick="handleCheckout('pro')" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition">
-                                            Reserve
-                                        </button>
-                                    </div>
-                                `);
-                            }
-                        </script>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #1</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #2</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #3</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #4</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #5</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #6</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #7</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #8</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #9</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #10</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
                     </div>
                 </div>
             </section>
@@ -173,22 +165,42 @@
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="bg-[#12100b] border border-amber-500/40 rounded-xl p-6 text-center flex flex-col justify-between h-44 shadow-lg hover:border-amber-500/80 transition">
                             <span class="text-xs font-bold text-amber-300/80 uppercase">SLOT #1 AVAILABLE</span>
-                            <button onclick="handleCheckout('exclusive')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20">
+                            <button data-checkout="exclusive" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20 cursor-pointer">
                                 Claim Exclusive<br>Slot ($500)
                             </button>
                         </div>
                         <div class="bg-[#12100b] border border-amber-500/40 rounded-xl p-6 text-center flex flex-col justify-between h-44 shadow-lg hover:border-amber-500/80 transition">
                             <span class="text-xs font-bold text-amber-300/80 uppercase">SLOT #2 AVAILABLE</span>
-                            <button onclick="handleCheckout('exclusive')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20">
+                            <button data-checkout="exclusive" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20 cursor-pointer">
                                 Claim Exclusive<br>Slot ($500)
                             </button>
                         </div>
                         <div class="bg-[#12100b] border border-amber-500/40 rounded-xl p-6 text-center flex flex-col justify-between h-44 shadow-lg hover:border-amber-500/80 transition">
                             <span class="text-xs font-bold text-amber-300/80 uppercase">SLOT #3 AVAILABLE</span>
-                            <button onclick="handleCheckout('exclusive')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20">
+                            <button data-checkout="exclusive" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-lg text-xs transition shadow-md shadow-amber-500/20 cursor-pointer">
                                 Claim Exclusive<br>Slot ($500)
                             </button>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Pro Section ($200/mo) -->
+                <div>
+                    <h3 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3">
+                        VERIFIED PRO AGENCIES ($200/MO) — MAX 10 AGENCIES
+                    </h3>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #1</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #2</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #3</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #4</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #5</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #6</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #7</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #8</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #9</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
+                        <div class="bg-[#0b0e1a] border border-slate-800/80 rounded-lg p-3 text-center flex flex-col justify-between h-20 hover:border-slate-700 transition"><span class="text-[10px] font-semibold text-slate-500 uppercase">SLOT #10</span><button data-checkout="pro" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold py-1.5 px-2 rounded border border-slate-700/60 text-[11px] transition cursor-pointer">Reserve</button></div>
                     </div>
                 </div>
             </section>
@@ -203,39 +215,42 @@
         </div>
     </footer>
 
-    <!-- Script de Redirección y Validación Fair-Play -->
+    <!-- JS de redirección y validación sin fallos -->
     <script>
-        function handleCheckout(planType) {
-            const checkbox = document.getElementById('fairPlayCheckbox');
-            const errorMessage = document.getElementById('checkboxError');
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('[data-checkout]');
+            if (!btn) return;
 
-            // 1. Validar si el checkbox está marcado
+            e.preventDefault();
+
+            const checkbox = document.getElementById('fairPlayCheckbox');
+            const errorMsg = document.getElementById('checkboxError');
+
+            // Validar checkbox Fair-Play
             if (!checkbox || !checkbox.checked) {
-                if (errorMessage) errorMessage.classList.remove('hidden');
+                if (errorMsg) errorMsg.classList.remove('hidden');
                 if (checkbox) {
-                    checkbox.focus();
                     checkbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    checkbox.focus();
                 }
                 return;
             }
 
-            // Ocultar mensaje de error si está marcado
-            if (errorMessage) errorMessage.classList.add('hidden');
+            if (errorMsg) errorMsg.classList.add('hidden');
 
-            // 2. URLs de pago verificadas en Lemon Squeezy
-            let checkoutUrl = '';
+            const type = btn.getAttribute('data-checkout');
+            let url = '';
 
-            if (planType === 'exclusive') {
-                checkoutUrl = 'https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188';
-            } else if (planType === 'pro') {
-                checkoutUrl = 'https://voiceagency.lemonsqueezy.com/checkout/buy/ce096003-b077-47ea-a6ef-6ac79e1ff918';
+            if (type === 'exclusive') {
+                url = 'https://voiceagency.lemonsqueezy.com/checkout/buy/4eeac7b6-a399-487d-875c-95ffa4618188';
+            } else if (type === 'pro') {
+                url = 'https://voiceagency.lemonsqueezy.com/checkout/buy/ce096003-b077-47ea-a6ef-6ac79e1ff918';
             }
 
-            // 3. Redirección instantánea a la pasarela
-            if (checkoutUrl) {
-                window.location.href = checkoutUrl;
+            if (url) {
+                window.location.href = url;
             }
-        }
+        });
     </script>
 </body>
 </html>
